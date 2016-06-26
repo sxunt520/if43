@@ -1,0 +1,62 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Member/index">会员列表</a><span class="crumb-step">&gt;</span><span>修改会员资料</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th><i class="require-red">*</i>手机号：</th>
+                                <td>
+                                    <input class="common-text required" name="phone" size="30" value="{$row.phone}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>账号：</th>
+                                <td>
+                                    <input class="common-text required" name="username" size="30" value="{$row.username}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>邮箱：</th>
+                                <td><input class="common-text" name="email" size="30" type="text" value="{$row.email}"></td>
+                            </tr>
+                            <tr>
+                                <th>头像：</th>
+                                <td>
+                                	<img src="/Public/uploads/{$row.img180x180}" width="120" style="margin:10px 0;"/>
+                                    <input name="person_img" type="file">请上传<span class="fuchsia">180x180</span>的个人形像靓一张!
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>性别：</th>
+                                <td>
+                                <label><input type="radio" name="sex" value="1" <if condition="$row['sex'] eq '1'" >checked='checked'<else /></if>>&nbsp;男</label>&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="sex" value="0" <if condition="$row['sex'] eq '0'" >checked='checked'<else /></if>>&nbsp;女</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>是否屏蔽：</th>
+                                <td>
+                                <label><input type="radio" name="is_display" value="1" <if condition="$row['is_display'] eq '1'" >checked='checked'<else /></if>>&nbsp;显视</label>&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="is_display" value="0" <if condition="$row['is_display'] eq '0'" >checked='checked'<else /></if>>&nbsp;屏蔽</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="修改" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+</block>          

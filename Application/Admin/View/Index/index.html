@@ -1,0 +1,66 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>欢迎来到 IF43.COM 后台管理程序!</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-title">
+                <h1>快捷操作</h1>
+            </div>
+            <div class="result-content">
+                <div class="short-wrap">
+                    <a href="__MODULE__/AdvType/index"><i class="icon-font">&#xe001;</i>广告管理</a>
+                    <a href="__MODULE__/Pro/index"><i class="icon-font">&#xe005;</i>精品管理</a>
+                    <a href="__MODULE__/Member/index"><i class="icon-font">&#xe048;</i>会员管理</a>
+                    <a href="__MODULE__/Comment/index"><i class="icon-font">&#xe041;</i>评价管理</a>
+                    <a href="#"><i class="icon-font">&#xe01e;</i>主题管理</a>
+                    <a href="__MODULE__/Manager/index"><i class="icon-font">&#xe01e;</i>管理员模块</a>
+                </div>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-title">
+                <h1>系统基本信息</h1>
+            </div>
+            <div class="result-content">
+                <ul class="sys-info-list" style=" height:520px; overflow-y:scroll;">
+                    <li><label class="res-lab">服务器解译引擎：</label><span class="res-info"><php>echo $_SERVER['SERVER_SOFTWARE']</php></span></li>
+                    <li><label class="res-lab">系统类型</label><span class="res-info"><php>echo php_uname('s')</php></span></li>
+                    <li><label class="res-lab">系统版本号</label><span class="res-info"><php>echo php_uname('r')</php></span></li>
+                    <li><label class="res-lab">PHP运行方式：</label><span class="res-info"><php>echo php_sapi_name()</php></span></li>
+                    <li><label class="res-lab">前进程用户名</label><span class="res-info"><php>echo Get_Current_User()</php></span></li>
+                    <li><label class="res-lab">PHP版本</label><span class="res-info"><php>echo PHP_VERSION</php></span></li>
+                    <li><label class="res-lab">Zend版本：</label><span class="res-info"><php>echo Zend_Version()</php></span></li>
+                    <li><label class="res-lab">PHP安装路径：</label><span class="res-info"><php>echo DEFAULT_INCLUDE_PATH</php></span></li>
+                    <li><label class="res-lab">Http请求中Host值：</label><span class="res-info"><php>echo $_SERVER["HTTP_HOST"]</php></span></li>
+                    <li><label class="res-lab">服务器IP：</label><span class="res-info"><php>echo GetHostByName($_SERVER['SERVER_NAME'])</php></span></li>
+                    <li><label class="res-lab">接受请求的服务器IP：</label><span class="res-info"><php>echo $_SERVER["SERVER_ADDR"]</php></span></li>
+                    <li><label class="res-lab">客户端IP：</label><span class="res-info"><php>echo $_SERVER['REMOTE_ADDR']</php></span></li>
+                    <li><label class="res-lab">服务器系统目录：</label><span class="res-info"><php>echo $_SERVER['SystemRoot']</php></span></li>
+                    <li><label class="res-lab">服务器域名：</label><span class="res-info"><php>echo $_SERVER['SERVER_NAME']</php></span></li>
+                    <li><label class="res-lab">服务器语言：</label><span class="res-info"><php>echo $_SERVER['HTTP_ACCEPT_LANGUAGE']</php></span></li>
+                    <li><label class="res-lab">服务器Web端口：</label><span class="res-info"><php>echo $_SERVER['SERVER_PORT']</php></span></li>
+                    <li><label class="res-lab">HTTP版本：</label><span class="res-info"><php>echo $_SERVER['SERVER_PROTOCOL']</php></span></li>
+                    <li><label class="res-lab">系统类型及版本号：</label><span class="res-info"><php>echo php_uname()</php></span></li>
+                    <li><label class="res-lab">当前文件绝对路径：</label><span class="res-info"><php>echo __FILE__</php></span></li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="result-wrap">
+            <div class="result-title">
+                <h1>使用帮助</h1>
+            </div>
+            <div class="result-content">
+                <ul class="sys-info-list">
+                    <li>
+                        <label class="res-lab">官方交流网站：</label><span class="res-info"><a href="http://www.mycodes.net/" target="_blank">源码之家</a></span>
+                    </li>
+                    <li>
+                        <label class="res-lab">官方交流QQ群：</label><span class="res-info"><a class="qq-link" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=4ba39c297a33fa548de56a257f6128c7c9e3dd14473e4c86557d93f2197c33e8"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="JS-前端开发" title="JS-前端开发"></a> </span>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        
+</block>        

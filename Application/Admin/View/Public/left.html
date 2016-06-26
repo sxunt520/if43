@@ -1,0 +1,72 @@
+<!--------left_Action--------->
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+            	<li>
+                    <h3><a href="javascript:void(0);"><i class="icon-font">&#xe034;</i>广告管理</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Adv' || CONTROLLER_NAME== 'AdvType' ? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/AdvType/index" <php> echo CONTROLLER_NAME== 'AdvType' && ACTION_NAME== 'index'? "class='olive'":'';</php>><i class="icon-font">&#xe034;</i>广告类型</a></li>
+                        <li><a href="__MODULE__/AdvType/add" <php> echo CONTROLLER_NAME== 'AdvType' && ACTION_NAME== 'add'? "class='olive'":'';</php>><i class="icon-font">&#xe026;</i>添加类型</a></li>
+                        <li><a href="__MODULE__/Adv/index/type_id/0" <php> echo CONTROLLER_NAME== 'Adv' && ACTION_NAME== 'index'? "class='olive'":'';</php>><i class="icon-font">&#xe005;</i>广告列表</a></li>
+                        <li><a href="__MODULE__/Adv/add/type_id/0" <php> echo CONTROLLER_NAME== 'Adv' && ACTION_NAME== 'add'? "class='olive'":'';</php>><i class="icon-font">&#xe026;</i>添加广告</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="javascript:void(0);"><i class="icon-font">&#xe013;</i>精品管理</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Category' || CONTROLLER_NAME== 'Pro' || CONTROLLER_NAME== 'Type'|| CONTROLLER_NAME== 'Attribute'? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/Category/index" <php> echo CONTROLLER_NAME== 'Category' && ACTION_NAME== 'index'? "class='olive'":'';</php>><i class="icon-font">&#xe006;</i>精品分类</a></li>
+                        <li><a href="__MODULE__/Type/index" <php> echo CONTROLLER_NAME== 'Type' && ACTION_NAME== 'index'? "class='olive'":'';</php>><i class="icon-font">&#xe034;</i>精品类型</a></li>
+                        <li><a href="__MODULE__/Pro/index" <php> echo CONTROLLER_NAME== 'Pro' && ACTION_NAME== 'index'? "class='olive'":'';</php>><i class="icon-font">&#xe005;</i>精品列表</a></li>
+                        <li><a href="__MODULE__/Pro/add" <php> echo CONTROLLER_NAME== 'Pro' && ACTION_NAME== 'add'? "class='olive'":'';</php>><i class="icon-font">&#xe026;</i>添加精品</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="#"><i class="icon-font">&#xe014;</i>会员管理</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Member' ? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/Member/index" <php> echo CONTROLLER_NAME== 'Member' && ACTION_NAME== 'index'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe048;</i>会员列表</a></li>
+                        <li><a href="__MODULE__/Member/add" <php> echo CONTROLLER_NAME== 'Member' && ACTION_NAME== 'add'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe026;</i>添加会员</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="#"><i class="icon-font">&#xe012;</i>评价管理</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Comment' ? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/Comment/index" <php> echo CONTROLLER_NAME== 'Comment' && ACTION_NAME== 'index'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe048;</i>评价列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="#"><i class="icon-font">&#xe043;</i>主题管理</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Topic' ? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/Topic/index" <php> echo CONTROLLER_NAME== 'Topic' && ACTION_NAME== 'index'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe048;</i>主题列表</a></li>
+                        <li><a href="__MODULE__/Topic/add" <php> echo CONTROLLER_NAME== 'Topic' && ACTION_NAME== 'add'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe026;</i>添加主题</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="#"><i class="icon-font">&#xe018;</i>管理员模块</a></h3>
+                    <ul class="sub-menu" style="display:<php> echo CONTROLLER_NAME== 'Manager' || CONTROLLER_NAME== 'Auth'? 'block':'none';</php>;">
+                        <li><a href="__MODULE__/Manager/index" <php> echo CONTROLLER_NAME== 'Manager' && ACTION_NAME== 'index'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe048;</i>管理员列表</a></li>
+                        <li><a href="__MODULE__/Manager/add" <php> echo CONTROLLER_NAME== 'Manager' && ACTION_NAME== 'add'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe026;</i>添加管理员</a></li>
+                        <li><a href="__MODULE__/Auth/index" <php> echo CONTROLLER_NAME== 'Auth' && ACTION_NAME== 'index'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe014;</i>角色列表页</a></li>
+                        <li><a href="__MODULE__/Auth/addRole" <php> echo CONTROLLER_NAME== 'Auth' && ACTION_NAME== 'addRole'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe026;</i>添加角色</a></li>
+                        <li><a href="__MODULE__/Auth/authList" <php> echo CONTROLLER_NAME== 'Auth' && ACTION_NAME== 'authList'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe015;</i>权限列表</a></li>
+                        <li><a href="__MODULE__/Auth/add" <php> echo CONTROLLER_NAME== 'Auth' && ACTION_NAME== 'add'? "class='olive'":'';</php>>&nbsp;<i class="icon-font">&#xe026;</i>添加权限</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="#"><i class="icon-font">&#xe035;</i>项目架构</a></h3>
+                    <ul class="sub-menu"  style="display:none;">
+                  	    <li><a href="/Public/img/map1.png" target="_blank"><i class="icon-font">&#xe036;</i>项目草图</a></li>
+                        <li><a href="/Public/img/map2.png" target="_blank"><i class="icon-font">&#xe036;</i>架构思维脑图</a></li>
+                        <li><a href="/Public/img/map3.png" target="_blank"><i class="icon-font">&#xe036;</i>全站表设计</a></li>
+                        <for start="1" end="70">
+                        <li><a href="system.html"><i class="icon-font">&#xe0{$i};</i>{$i}</a></li>
+                        </for>
+                    </ul>
+                </li>
+            </ul>
+            <h4 class="allright">© 2015 <a href="/" target="_blank">IF43.COM</a> <br />All Rights Reserved</h4>
+        </div>
+    </div>
+<!--------left_End--------->

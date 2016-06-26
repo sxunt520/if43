@@ -1,0 +1,56 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">管理员列表</a><span class="crumb-step">&gt;</span><span>管理员信息修改</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__CONTROLLER__/save_doit/id/{$user.id}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th><i class="require-red">*</i>管理员用户名：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="username" size="50" value="{$user.username}" type="text" disabled='disabled'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>邮箱：</th>
+                                <td><input class="common-text" name="email" size="50" type="text" value="{$user.email}"></td>
+                            </tr>
+                            <tr>
+                                <th>真实姓名：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="realname" size="50" value="{$user.realname}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>性别：</th>
+                                <td>
+                                <label><input type="radio" name="sex" value="1" {$user['sex'] == 1?checked:''}>&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;</label>
+								<label><input type="radio" name="sex" value="0" {$user['sex'] == 0?checked:''}>&nbsp;女&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>屏蔽：</th>
+                                <td>
+                                <label><input type="radio" name="disabled" value="0" {$user['disabled'] == 0 ? checked :''}>&nbsp;屏蔽&nbsp;&nbsp;&nbsp;&nbsp;</label>
+								<label><input type="radio" name="disabled" value="1" {$user['disabled'] == 1 ? checked :''}>&nbsp;开启&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="修改" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+</block>          

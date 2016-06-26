@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>如果时尚！爱否时尚-发现喜欢-不外出逛街一样可以发现自己喜欢的!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="如果，时尚，爱否，购物分享，购物社区">
+<meta name="description" content="如果，从这里开始，发现喜欢，改变生活。我们为你推荐适合的消费，是你购物决策的贴心助理。整合商品信息、网友评价，服务质量和价格比较。">
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/css/visual.css">
+</head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+<!-------------------------banner_Action------------------------->
+<div class="index-top-slides">
+	<div class="site-body-container">
+		<div class="ember-view page-view section-page home-page">
+			<div class="ember-view carousel">
+				<div class="container">
+					<div class="ember-view carousel-content carousel-transition">
+                    
+                        <volist name="banner" id="vo">
+                            <div id="slideDiv{$i}" class="ember-view article-block article-block-overlay carousel-item slideDiv{$i}">
+                                <div class="ember-view image-view article-block-image pic">
+                                    <a class="ember-view article-block-link" href="{$vo.jumpurl}" target="_blank">
+                                        <div class="ember-view background-image" style="background-image:url(&quot;/Public/uploads/{$vo.advimg}&quot;)">
+                                        </div>
+                                    </a>
+                                </div>
+                            <div class="article-block-details">
+                                <a class="ember-view article-block-title-link" href="{$vo.jumpurl}" target="_blank"><h3 class="article-block-title">{$vo.title}</h3></a>    
+                                    <div class="article-block-subdetails">
+                                    <div class="share-2">
+                                    <span class="fr cf">
+                                    <a href="{$vo.jumpurl}" target="_blank" class="wb"></a>
+                                    <a href="{$vo.jumpurl}" target="_blank" class="qq"></a>
+                                    <a href="{$vo.jumpurl}" class="wx"></a>
+                                    </span>
+                                    <span class="hot"><i></i>10004</span>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </volist>
+
+					</div>
+				</div>
+				<a style="display: none;" class="arrow-control arrow-control-prev">
+					<span class="arrow-control-btn"></span>
+				</a>
+				<a style="display: none;" class="arrow-control arrow-control-next">
+					<span class="arrow-control-btn"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/Public/js/visual.js"></script>
+<!-------------------------banner_End------------------------->
+<div id="wrap">
+    <div id="container">
+        <div class="main-focus clearfix">
+        <div class="main-focus-tags">
+        
+        	<dl data-popup="popup1" class="tags-bd">
+            	<dt class="group-title">
+                	<a class="tag-group" href="__MODULE__/Clothes/prolist/cat_id/1" target="_blank">衣服</a>
+                </dt>
+                <dd class="group-box">
+                    <volist name="tj1" id="vo">
+                		<a class="tag-item" href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}</a>
+                    </volist>
+                </dd>
+                <dd style="display: none;" class="popup-arr-lf"></dd>
+            </dl>
+            
+            <dl data-popup="popup2" class="tags-bd">
+            	<dt class="group-title">
+                	<a class="tag-group" href="__MODULE__/Shoe/prolist/cat_id/2" target="_blank">鞋子</a>
+                </dt>
+                <dd class="group-box">
+                	<volist name="tj2" id="vo">
+                		<a class="tag-item" href="__MODULE__/Shoe/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}</a>
+                    </volist>
+                 </dd>
+                <dd style="display: none;" class="popup-arr-lf"></dd>
+            </dl>
+            
+            <dl data-popup="popup3" class="tags-bd">
+            	<dt class="group-title">
+                	<a class="tag-group" href="__MODULE__/Bag/prolist/cat_id/3" target="_blank">包包</a>
+                </dt>
+                <dd class="group-box">
+                    <volist name="tj3" id="vo">
+                		<a class="tag-item" href="__MODULE__/Bag/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}</a>
+                    </volist>
+                </dd>
+                <dd style="display: none;" class="popup-arr-lf"></dd>
+            </dl>
+            
+            <dl data-popup="popup4" class="tags-bd">
+            	<dt class="group-title">
+                	<a class="tag-group" href="__MODULE__/Acc/prolist/cat_id/4" target="_blank">配饰</a>
+                </dt>
+                <dd class="group-box">
+                	<volist name="tj4" id="vo">
+                		<a class="tag-item" href="__MODULE__/Acc/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}</a>
+                    </volist>
+               	</dd>
+                <dd style="display: none;" class="popup-arr-lf"></dd>
+            </dl>
+            
+            <div style="display: none;" class="tags-popup popup1">
+            <div class="tags-list clearfix">
+            <dl class="tags-col">
+            	 <dt><a class="tag-tl" href="__MODULE__/Clothes/prolist/cat_id/5" target="_blank">上衣TOPS</a><i class="arr-dw"></i></dt>
+                	<dd>
+                    	<volist name="subCat1" id="vo">
+                            <a class="tag-item" href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                        </volist>
+                     </dd>
+              </dl>
+                <dl class="tags-col">
+                    <dt><a class="tag-tl" href="__MODULE__/Clothes/prolist/cat_id/6" target="_blank">裤子TROUSERS</a><i class="arr-dw"></i></dt>
+                    <dd>
+                        <volist name="subCat2" id="vo">
+                            <a class="tag-item" href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                        </volist>
+                    </dd>
+                </dl>
+                <dl class="tags-col last"> 
+                        <dt><a class="tag-tl" href="__MODULE__/Clothes/prolist/cat_id/7" target="_blank">裙子DRESSES</a><i class="arr-dw"></i></dt>
+                        <dd>
+                            <volist name="subCat3" id="vo">
+                               <a class="tag-item" href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                       		 </volist>
+                        </dd>
+                  </dl>
+               </div>
+            <div class="popup-banner">
+              <a href="{$catBanner[0]['jumpurl']}" target="_blank" title="{$catBanner[0]['title']}">
+                <img src="/Public/uploads/{$catBanner[0]['advimg']}" alt="{$catBanner[0]['title']}" height="121" width="468">
+              </a>
+            </div>
+          </div>
+          
+            <div style="display: none;" class="tags-popup popup2">
+            <div class="tags-list clearfix">
+            <dl class="tags-col"> 
+                <dt><a class="tag-tl" href="__MODULE__/Shoe/prolist/cat_id/47#tagB" target="_blank">款式STYLE </a><i class="arr-dw"></i></dt>
+                <dd>
+                     <volist name="subCat4" id="vo">
+                       <a class="tag-item" href="__MODULE__/Shoe/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}{$vo.cat_id}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                     </volist>
+                </dd>
+            </dl>
+            <dl class="tags-col"> 
+                <dt><a class="tag-tl" href="__MODULE__/Shoe/prolist/cat_id/48#tagB" target="_blank">元素ELEMENT</a><i class="arr-dw"></i></dt>
+                <dd>
+                     <volist name="subCat5" id="vo">
+                       <a class="tag-item" href="__MODULE__/Shoe/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                     </volist>
+                </dd>
+            </dl>
+            <dl class="tags-col last"> 
+                <dt><a class="tag-tl" href="__MODULE__/Shoe/index#tagB" target="_blank">潮流风格FASHION</a><i class="arr-dw"></i></dt>
+                <dd>
+                    <volist name="subCat6" id="vo">
+                       <a class="tag-item" href="__MODULE__/Shoe/prolist/fg/{$vo}" target="_blank">{$vo}</a>
+                     </volist>
+                </dd>
+            </dl>
+            </div>
+                <div class="popup-banner">
+                    <a href="{$catBanner[1]['jumpurl']}" target="_blank"  title="{$catBanner[1]['title']}">
+                    <img src="/Public/uploads/{$catBanner[1]['advimg']}" alt="{$catBanner[1]['title']}" height="121" width="468">
+                  </a>
+                </div>
+            </div>
+            
+            <div style="display: none;" class="tags-popup popup3">
+            <div class="tags-list clearfix">
+            	<dl class="tags-col">
+                <dt><a class="tag-tl" href="__MODULE__/Bag/prolist/cat_id/86#tagB" target="_blank">款式STYLE</a><i class="arr-dw"></i></dt>
+                <dd>
+                    <volist name="subCat7" id="vo">
+                       <a class="tag-item" href="__MODULE__/Bag/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                     </volist>
+                </dd>
+              </dl>
+                <dl class="tags-col"> 
+                <dt><a class="tag-tl" href="__MODULE__/Bag/prolist/cat_id/88#tagB" target="_blank">流行TREND</a><i class="arr-dw"></i></dt>
+                <dd>
+                    <volist name="subCat8" id="vo">
+                           <a class="tag-item" href="__MODULE__/Bag/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                     </volist>
+                </dd>
+                </dl>
+                <dl class="tags-col last"> 
+                    <dt><a class="tag-tl" href="__MODULE__/Bag/prolist" target="_blank">材质MATERIAL</a><i class="arr-dw"></i></dt>
+                    <dd>
+                        <volist name="subCat9" id="vo">
+                           <a class="tag-item" href="__MODULE__/Bag/prolist/cz/{$vo}" target="_blank">{$vo}</a>
+                         </volist>
+                    </dd>
+                </dl>
+                </div>
+            <div class="popup-banner">
+              <a href="{$catBanner[2]['jumpurl']}" target="_blank"  title="{$catBanner[2]['title']}">
+                <img src="/Public/uploads/{$catBanner[2]['advimg']}" alt="{$catBanner[2]['title']}" height="121" width="468">
+              </a>
+            </div>
+          </div>
+          
+          <div style="display: none;" class="tags-popup popup4">
+            <div class="tags-list clearfix">
+                    <dl class="tags-col"> 
+                        <dt><a class="tag-tl" href="__MODULE__/Acc/prolist/cat_id/128#tagB" target="_blank">首饰JEWELRY</a><i class="arr-dw"></i></dt>
+                        <dd>
+                            <volist name="subCat10" id="vo">
+                                   <a class="tag-item" href="__MODULE__/Acc/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                             </volist>
+                        </dd>
+                    </dl>
+                    <dl class="tags-col"> 
+                    <dt><a class="tag-tl" href="__MODULE__/Acc/prolist/cat_id/129#tagB" target="_blank">装扮DRESS UP</a><i class="arr-dw"></i></dt>
+                    <dd>
+                        <volist name="subCat11" id="vo">
+                               <a class="tag-item" href="__MODULE__/Acc/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><i class="annotated">*</i><else /></if></a>
+                         </volist>
+                    </dd>
+                    </dl>
+                    <dl class="tags-col last"> 
+                        <dt><a class="tag-tl" href="__MODULE__/Acc/prolist" target="_blank">材质MATERIAL</a><i class="arr-dw"></i></dt>
+                        <dd>
+                            <volist name="subCat12" id="vo">
+                                   <a class="tag-item" href="__MODULE__/Acc/prolist/cz/{$vo}" target="_blank">{$vo}</a>
+                             </volist>
+                        </dd>
+                    </dl>
+                            </div>
+            <div class="popup-banner">
+              <a href="{$catBanner[3]['jumpurl']}" target="_blank"  title="{$catBanner[3]['title']}">
+                <img src="/Public/uploads/{$catBanner[3]['advimg']}" alt="{$catBanner[3]['title']}" height="121" width="468">
+              </a>
+            </div>
+          </div>
+   
+              </div> 
+        <!-- tags end -->
+        
+            <div class="main-focus-slider">
+            	
+                <div id="kinMaxShow">
+                	<volist name="focus" id="vo">
+                    	<div><a href="{$vo.jumpurl}" target="_blank" title="{$vo.title}"><img src="/Public/uploads/{$vo.advimg}"/></a></div>
+                    </volist>    
+                </div>
+            </div>
+        <!-- slider end -->
+        
+        <div class="main-focus-newpro">
+            <div class="newpro-hd clearfix">
+              <div class="calender">
+                <em id="J_DayNum" class="day-num">28</em>
+                <span id="J_YearNum" class="year-num">2015</span>
+                <span id="J_MonNum" class="mon-num">06</span>
+              </div>
+              <h3 class="newpro-title">
+                <a href="#" target="_blank">
+                  今日新品
+                  <span class="title-en">New Products</span>
+                </a>
+              </h3>
+            </div>
+            <div class="newpro-bd">
+              <a href="{$newPic.jumpurl}" title="{$newPic.title}" target="_blank">
+                <img src="/Public/uploads/{$newPic.advimg}" alt="{$newPic.title}" height="250" width="210">
+                <!--<span class="bd-title">— 最新专题 —</span>-->
+              </a>
+            </div>
+        </div>
+        <!-- newpro end -->
+        <script>
+        (function(){
+          // 日历
+          var myDate = new Date(),
+            curYear = myDate.getFullYear(),
+            curMonth = myDate.getMonth(),
+            curDate = myDate.getDate();
+        
+          curMonth = curMonth+1;
+          curMonth = curMonth.toString().length<2?("0"+curMonth):curMonth;
+          curDate = curDate.toString().length<2?("0"+curDate):curDate;
+        
+          document.getElementById("J_YearNum").innerHTML = curYear;
+          document.getElementById("J_MonNum").innerHTML = curMonth;
+          document.getElementById("J_DayNum").innerHTML = curDate;
+        })();
+        </script>
+        </div>
+        
+        <div class="category-main clearfix">
+            <div class="category-left">
+                <div class="topic">
+                    <div class="hd pl10">
+                        <h2>今日精选主题</h2>
+                    </div>
+                    <div class="topic-recommend">
+                    <div class="pic">
+                        <a href="#" target="_blank">
+                        	<img src="/Public/images/1435283963853.jpg" alt="简约" height="274" width="300">
+                        </a>
+                    </div>
+                        <div style="top: 274px;" class="J_picGrid">
+                            <a href="#" target="_blank">
+                                <img alt="简约" src="/Public/images/eeruajjbpyveaxzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpyvh4xzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpyvcixzol45f6lq.jpg" class="last">
+                                <img alt="简约" src="/Public/images/eeruajjbpytf4xzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpytcgxzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpyssuxzol45f6lq.jpg" class="last">
+                                <img alt="简约" src="/Public/images/eeruajjbpzpccxzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpysscxzol45f6lq.jpg">
+                                <img alt="简约" src="/Public/images/eeruajjbpyssixzol45f6lq.jpg" class="last">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="topic-recommend">
+                    <div class="pic">
+                        <a href="#" target="_blank">
+                             <img src="/Public/images/1435284111298.jpg" alt="罗马假日" height="274" width="300">
+                        </a>
+                    </div>
+                        <div style="top: 274px;" class="J_picGrid">
+                            <a href="#" target="_blank">
+                                <img alt="罗马假日" src="/Public/images/efacmkrgef7ccxzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efack7reeessgxzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efaf4izeeutd6xzol45f6lq.jpg" class="last">
+                                <img alt="罗马假日" src="/Public/images/efaciijkib7d6xzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efacgjbklyqscxzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efackij7enacixzol45f6lq.jpg" class="last">
+                                <img alt="罗马假日" src="/Public/images/efaf4jbder7h4xzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efaciqb7emseaxzol45f6lq.jpg">
+                                <img alt="罗马假日" src="/Public/images/efaf4jbgiavcgxzol45f6lq.jpg" class="last">
+                            </a>
+                        </div>
+                    </div>
+                <div class="topic-recommend">
+                <div class="pic">
+                    <a href="#" target="_blank">
+                  		  <img src="/Public/images/1435284269568.jpg" alt="泳装party" height="274" width="300">
+                    </a>
+                </div>
+                    <div style="top: 274px;" class="J_picGrid">
+                        <a href="#" target="_blank">
+                            <img alt="泳装party" src="/Public/images/iavh4pzdeyrv6ls7hjps4.jpg">
+                            <img alt="泳装party" src="/Public/images/efack7rfeeveaxzol45f6lq.jpg">
+                            <img alt="泳装party" src="/Public/images/efacgizfibpccxzol45f6lq.jpg" class="last">
+                            <img alt="泳装party" src="/Public/images/iassiik6eqtf6ls7hjps4.jpg">
+                            <img alt="泳装party" src="/Public/images/emsscjcaenaf6ls7hjps4.jpg">
+                            <img alt="泳装party" src="/Public/images/efacujjbeusskxzol45f6lq.jpg" class="last">
+                            <img alt="泳装party" src="/Public/images/efacgizfibpckxzol45f6lq.jpg">
+                            <img alt="泳装party" src="/Public/images/efacuxs6eeqx4xzol45f6lq.jpg">
+                            <img alt="泳装party" src="/Public/images/eussiks6eeqv6ls7hjps4.jpg" class="last">
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="category-right">
+                <div class="wonderful">
+                    <div class="hd">
+                        <h2>精选榜</h2>
+                        <div class="more">
+                            <a href="#" target="_blank">万千精彩&gt;</a>
+                        </div>
+                    </div>
+                    <ul class="clearfix">
+                    <li>
+                   		<a class="ofh max" href="#" target="_blank">玩转初春英伦风</a><span class="new">新晋</span>
+                	    <span class="num">46</span>
+                    </li>
+                    <li>
+                    <a class="ofh max" href="#/jie/1194513" target="_blank">卖萌T, 萌化你</a><span class="hot">热点</span>
+                    <span class="num">51</span>
+                    </li>
+                    <li>
+                    <a class="ofh max" href="#/jie/1194021" target="_blank">三七分，瘦高立现</a><span class="new">新晋</span>
+                    <span class="num">45</span>
+                    </li>
+                    <li>
+                    <a class="ofh max" href="#/jie/1193836" target="_blank">黑金小时代</a><span class="new">新晋</span>
+                    <span class="num">42</span>
+                    </li>
+                    <li>
+                    <a class="ofh default" href="#/jie/1194564" target="_blank">小翻领甜美外套❤甜美女人节</a>
+                    <span class="num">42</span>
+                    </li>
+                    <li>
+                    <a class="ofh default" href="#/jie/1194518" target="_blank">衬衫与开衫的清新搭配</a>
+                    <span class="num">45</span>
+                    </li>
+                    <li>
+                    <a class="ofh default" href="#/jie/1194488" target="_blank"> 复古感修身连衣裙！初春必备</a>
+                    <span class="num">45</span>
+                    </li>
+                    <li>
+                    <a class="ofh max" href="#/jie/1194468" target="_blank">宝蓝+纯白 打造清爽白富美！</a><span class="hot">热点</span>
+                    <span class="num">42</span>
+                    </li>
+                    <li>
+                    <a class="ofh max" href="#/jie/1192488" target="_blank">英伦潮时代之无与伦比</a><span class="new">新晋</span>
+                    <span class="num">44</span>
+                    </li>
+                    <li>
+                    <a class="ofh default" href="#/jie/1192094" target="_blank">5分钟，上班不再迟到</a>
+                    <span class="num">42</span>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category-main clearfix">
+            <div class="category clearfix ">
+            <div class="category-box pt0">
+            <div class="hd">
+            <h2>
+           		 <a href="__MODULE__/Clothes/prolist" target="_blank">衣服</a>
+            </h2>
+            </div>
+            <div class="left">
+            
+                <div class="pic-l">
+                    <a href="__MODULE__/Detail/index/pro_id/{$proRows1[0]['pro_id']}" target="_blank">
+                        <img alt="短袖T恤" src="/Public/uploads/{$proRows1[0]['img250x250']}" height="250" width="250">
+                         <span class="title">{$proRows1[0]['cat_name']}</span>
+                    </a>
+                </div>
+            
+                <div class="pic-r">
+                    <volist name="proRows1" id="vo" offset="1" length='11'>
+                        <div class="img">
+                            <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">
+                                <img alt="{$vo.pro_title}" src="/Public/uploads/{$vo.img120x120}" height="120" width="120">
+                                <span class="title">{$vo.cat_name}</span>
+                            </a>
+                        </div>
+                    </volist>
+                </div>
+                
+            </div>
+            <div class="right">
+                <div class="tag-info">
+                    <div class="tag">
+                    <a href="__MODULE__/Clothes/prolist/cat_id/5" target="_blank">上衣</a>
+                    </div>
+                    <div class="tagss">
+                     <volist name="subCat1" id="vo">
+                        <a href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                      </volist>
+                    </div>
+                </div>
+            <div class="tag-info">
+            <div class="tag">
+           		<a href="__MODULE__/Clothes/prolist/cat_id/6" target="_blank">裤子</a>
+            </div>
+            <div class="tagss">
+                <volist name="subCat2" id="vo">
+                    <a href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                  </volist>
+            </div>
+            </div>
+            <div class="tag-info">
+            <div class="tag">
+           		 <a href="__MODULE__/Clothes/prolist/cat_id/7" target="_blank">裙子</a>
+            </div>
+            <div class="tagss">
+                <volist name="subCat3" id="vo">
+                    <a href="__MODULE__/Clothes/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                  </volist>
+            </div>
+            </div>
+            <div class="tag-info">
+            <div class="tag">
+           		 <a href="__MODULE__/Clothes/index#tagB" target="_blank">风格</a>
+            </div>
+            <div class="tagss">
+                 <volist name="subCat13" id="vo">
+                    <a href="__MODULE__/Clothes/index/cat_id/1/fg/{$vo}#tagB" target="_blank">{$vo}</a>
+                  </volist>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+	         
+            <div class="category clearfix ">
+                <div class="category-box">
+                    <div class="hd">
+                        <h2>
+                      		  <a href="__MODULE__/shoe/prolist" target="_blank">鞋子</a>
+                        </h2>
+                    </div>
+                <div class="left">
+                       <div class="pic-l">
+                        <a href="__MODULE__/Detail/index/pro_id/{$proRows2[0]['pro_id']}" target="_blank">
+                            <img alt="短袖T恤" src="/Public/uploads/{$proRows2[0]['img250x250']}" height="250" width="250">
+                             <span class="title">{$proRows2[0]['cat_name']}</span>
+                        </a>
+                    </div>
+                    <div class="pic-r">
+                        <volist name="proRows2" id="vo" offset="1" length='11'>
+                            <div class="img">
+                                <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">
+                                    <img alt="雪纺衫" src="/Public/uploads/{$vo.img120x120}" height="120" width="120">
+                                    <span class="title">{$vo.cat_name}</span>
+                                </a>
+                            </div>
+                        </volist>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="tag-info">
+                        <div class="tag">
+                     	   <a href="__MODULE__/Shoe/prolist/cat_id/47#tagB" target="_blank">款式</a>
+                        </div>
+                    <div class="tagss">
+                        <volist name="subCat4" id="vo">
+                        <a href="__MODULE__/Shoe/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                       </volist>
+                    </div>
+                    </div>
+                <div class="tag-info">
+                    <div class="tag">
+                    <a href="__MODULE__/Shoe/prolist/cat_id/48#tagB" target="_blank">元素</a>
+                    </div>
+                    <div class="tagss">
+                         <volist name="subCat5" id="vo">
+                          <a href="__MODULE__/Shoe/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                        </volist>
+                    </div>
+                </div>
+                <div class="tag-info">
+                    <div class="tag">
+                      <a href="__MODULE__/Shoe/index#tagB" target="_blank">风格</a>
+                    </div>
+                <div class="tagss">
+                       <volist name="subCat6" id="vo">
+                          <a href="__MODULE__/Shoe/index/fg/{$vo}#tagB" target="_blank">{$vo}</a>
+                        </volist>
+                </div>
+                </div>
+                <div class="tag-info">
+                    <div class="tag">
+                 	   <a href="__MODULE__/Shoe/index#tagB" target="_blank">场景</a>
+                    </div>
+                    <div class="tagss">
+                       <volist name="subCat14" id="vo">
+                          <a href="__MODULE__/Shoe/index/cj/{$vo}#tagB" target="_blank">{$vo}</a>
+                        </volist>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+	         
+            <div class="category clearfix ">
+            <div class="category-box">
+                <div class="hd">
+                    <h2>
+                  		  <a href="__MODULE__/Bag/prolist" target="_blank">包包</a>
+                    </h2>
+                </div>
+            <div class="left">
+                	<div class="pic-l">
+                        <a href="__MODULE__/Detail/index/pro_id/{$proRows3[0]['pro_id']}" target="_blank">
+                            <img alt="短袖T恤" src="/Public/uploads/{$proRows3[0]['img250x250']}" height="250" width="250">
+                             <span class="title">{$proRows3[0]['cat_name']}</span>
+                        </a>
+                    </div>
+                
+                    <div class="pic-r">
+                        <volist name="proRows3" id="vo" offset="1" length='11'>
+                            <div class="img">
+                                <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">
+                                    <img alt="雪纺衫" src="/Public/uploads/{$vo.img120x120}" height="120" width="120">
+                                    <span class="title">{$vo.cat_name}</span>
+                                </a>
+                            </div>
+                        </volist>
+                    </div>
+            </div>
+            <div class="right">
+            <div class="tag-info">
+                <div class="tag">
+                    <a href="__MODULE__/Bag/prolist/cat_id/86#tagB" target="_blank">款式</a>
+                </div>
+            <div class="tagss">
+                		<volist name="subCat7" id="vo">
+                       	 <a href="__MODULE__/Bag/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                       </volist>
+            </div>
+            </div>
+            <div class="tag-info">
+                <div class="tag">
+                    <a href="__MODULE__/Bag/prolist/cat_id/88#tagB" target="_blank">流行</a>
+                </div>
+                    <div class="tagss">
+                        <volist name="subCat8" id="vo">
+                        <a href="__MODULE__/Bag/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                       </volist>
+                    </div>
+            </div>
+            <div class="tag-info">
+                <div class="tag">
+                     <a href="__MODULE__/Bag/index#tagB" target="_blank">材质</a>
+                </div>
+                    <div class="tagss">
+                        <volist name="subCat9" id="vo">
+                        <a href="__MODULE__/Bag/index/cz/{$vo}#tagB" target="_blank">{$vo}</a>
+                       </volist>
+                    </div>
+            </div>
+                <div class="tag-info">
+                    <div class="tag">
+                         <a href="__MODULE__/Bag/index#tagB" target="_blank">风格</a>
+                    </div>
+                        <div class="tagss">
+                            <volist name="subCat15" id="vo">
+                           		 <a href="__MODULE__/Bag/index/fg/{$vo}#tagB" target="_blank">{$vo}</a>
+                           </volist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+	         
+            <div class="category clearfix ">
+            <div class="category-box">
+                <div class="hd">
+                    <h2>
+                         <a href="__MODULE__/Acc/prolist" target="_blank">配饰</a>
+                    </h2>
+                </div>
+            <div class="left">
+                 <div class="pic-l">
+                        <a href="__MODULE__/Detail/index/pro_id/{$proRows4[0]['pro_id']}" target="_blank">
+                            <img alt="短袖T恤" src="/Public/uploads/{$proRows4[0]['img250x250']}" height="250" width="250">
+                             <span class="title">{$proRows4[0]['cat_name']}</span>
+                        </a>
+                    </div>
+                
+                    <div class="pic-r">
+                        <volist name="proRows4" id="vo" offset="1" length='11'>
+                            <div class="img">
+                                <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">
+                                    <img alt="雪纺衫" src="/Public/uploads/{$vo.img120x120}" height="120" width="120">
+                                    <span class="title">{$vo.cat_name}</span>
+                                </a>
+                            </div>
+                        </volist>
+                    </div>
+            </div>
+            <div class="right">
+            <div class="tag-info">
+                <div class="tag">
+                     <a href="__MODULE__/Acc/prolist/cat_id/128#tagB" target="_blank">首饰</a>
+                </div>
+                    <div class="tagss">
+                        <volist name="subCat10" id="vo">
+                       		<a href="__MODULE__/Acc/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                       </volist>
+                    </div>
+            </div>
+            <div class="tag-info">
+                <div class="tag">
+                     <a href="__MODULE__/Acc/prolist/cat_id/129#tagB" target="_blank">装扮</a>
+                </div>
+            <div class="tagss">
+                		<volist name="subCat11" id="vo">
+                       	 <a href="__MODULE__/Acc/prolist/cat_id/{$vo.cat_id}" target="_blank" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                       </volist>
+            </div>
+            </div>
+            <div class="tag-info">
+            <div class="tag">
+            <a href="__MODULE__/Acc/index#tagB" target="_blank">材质</a>
+            </div>
+                <div class="tagss">
+                  	  <volist name="subCat12" id="vo">
+                       	 <a href="__MODULE__/Acc/index/cz/{$vo}#tagB" target="_blank">{$vo}</a>
+                       </volist>
+                </div>
+            </div>
+                <div class="tag-info">
+                    <div class="tag">
+                         <a href="__MODULE__/Acc/index#tagB" target="_blank">风格</a>
+                    </div>
+                    <div class="tagss">
+                        <volist name="subCat16" id="vo">
+                       	 <a href="__MODULE__/Acc/index/fg/{$vo}#tagB" target="_blank">{$vo}</a>
+                       </volist>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+	    
+                </div>
+        		
+        <div class="category-main clearfix">
+            <div class="category-left">
+                <div class="follow-daren">
+                    <div class="hd">
+                        <h2>推荐关注达人</h2>
+                        <span class="separate">|</span>
+                        <a class="em" target="_blank" href="#">申请达人认证</a>
+                    </div>
+                    <div class="darenGrid">
+                        <div class="user">
+                            <a href="#" target="_blank">
+                            <img class="user-img" src="/Public/images/eevea7rkev7f6jc7eqqsu7q.jpg" alt="absolut梅">
+                        </a>
+                        <div class="user-info">
+                      			  <a rel="usercard" data-id="1820850" href="#" class="user-name" target="_blank">absolut梅<i class="inlineblock i-daren ml5"></i></a>
+                    		    <p></p>
+                        </div>
+                        </div>
+                        <div class="user-Grid">
+                            <a href="#/u/1820850" target="_blank">
+                                <img alt="absolut梅的宝贝" src="/Public/images/eeruaqb7em7uaxzol45f6lq.jpg">
+                                <img alt="absolut梅的宝贝" src="/Public/images/eeruaqb7em7x4xzol45f6lq.jpg">
+                                <img class="last" alt="absolut梅的宝贝" src="/Public/images/eeruaqb7emtcuxzol45f6lq.jpg">
+                                <img alt="absolut梅的宝贝" src="/Public/images/eeruaqb7emtcmxzol45f6lq.jpg">
+                                <img alt="absolut梅的宝贝" src="/Public/images/eeruaqb7emtf4xzol45f6lq.jpg">
+                                <img class="last" alt="absolut梅的宝贝" src="/Public/images/eeruaqb7emtcixzol45f6lq.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="darenGrid">
+                        <div class="user">
+                            <a href="#" target="_blank">
+                           		 <img class="user-img" src="/Public/images/eevckijkeusv6jc7eqqsu7q.jpg" alt="喵咪_sun">
+                            </a>
+                        <div class="user-info">
+                             <a rel="usercard" data-id="1851855" href="#" class="user-name" target="_blank">喵咪_sun<i class="inlineblock i-daren ml5"></i></a>
+                             <p>Follow U heart</p>
+                        </div>
+                        </div>
+                        <div class="user-Grid">
+                        <a href="#" target="_blank">
+                            <img alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenpckxzol45f6lq.jpg">
+                            <img alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenpcixzol45f6lq.jpg">
+                            <img class="last" alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenpcgxzol45f6lq.jpg">
+                            <img alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenpeaxzol45f6lq.jpg">
+                            <img alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenpccxzol45f6lq.jpg">
+                            <img class="last" alt="喵咪_sun的宝贝" src="/Public/images/eeruajbeenph4xzol45f6lq.jpg">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="darenGrid last">
+                    <div class="user">
+                    <a href="#" target="_blank">
+                    <img class="user-img" src="/Public/images/eetcgi36eyvf6jc7eqqsu7q.jpg" alt="享受生活点缀人生">
+                    </a>
+                    <div class="user-info">
+                        <a rel="usercard" data-id="1733078" href="#" class="user-name" target="_blank">享受生活点缀人生<i class="inlineblock i-daren ml5"></i></a>
+                        <p></p>
+                    </div>
+                    </div>
+                    <div class="user-Grid">
+                        <a href="#" target="_blank">
+                            <img alt="享受生活点缀人生的宝贝" src="/Public/images/eeruaizbeyqv4xzol45f6lq.jpg">
+                            <img alt="享受生活点缀人生的宝贝" src="/Public/images/eeruaizbeyqsixzol45f6lq.jpg">
+                            <img class="last" alt="享受生活点缀人生的宝贝" src="/Public/images/eerscxt6eytccxzol45f6lq.jpg">
+                            <img alt="享受生活点缀人生的宝贝" src="/Public/images/eeruaizbeyqsgxzol45f6lq.jpg">
+                            <img alt="享受生活点缀人生的宝贝" src="/Public/images/eeruaizbez7d6xzol45f6lq.jpg">
+                            <img class="last" alt="享受生活点缀人生的宝贝" src="/Public/images/eeruaizblyvd6xzol45f6lq.jpg">
+                        </a>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="category-right">
+                <div class="events-pic">
+                <div class="hd pb10">
+               		 <h2>活动</h2>
+                </div>
+                <a href="#" target="_bank">
+              	  <img src="/Public/images/1433207598688.jpg" alt="画报" height="153" width="210">
+                </a>
+                <div class="events-news">
+                <ul class="clearfix">
+                    <li class="ofh">
+                        <a href="#" target="_bank">
+                         4.21--5.3 主题方向：吃货大集结
+                        </a>
+                    </li>
+                    <li class="ofh">
+                        <a href="#" target="_bank">
+                         主题：宽松罩衫遮肉！秒变氧气Girl
+                        </a>
+                    </li>
+                    <li class="ofh">
+                        <a href="#" target="_bank">
+                        搭配-显高显瘦! 燕尾裙摆亮眼优雅
+                        </a>
+                    </li>
+                </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+                
+                <div class="justGuang clearfix">
+                    <h3>专注品质导购，每件宝贝都由网购达人、资深小编为你精挑细选</h3>
+                    <h4>每日50+精美主题、5000+精选单品、记得常来爱否时尚(IF43.COM)！</h4>
+                    <div class="already">
+                        <a class="go-faxian" href="/Home/Clothes/prolist/" target="_blank">逛单品&gt;</a>
+                        <a class="go-topic" href="/Home/Topic" target="_blank">翻主题&gt;</a>
+                    </div>
+                </div>
+    </div>
+</div>
+<include file="./Application/Home/View/Public/footer.html" />
+</body>
+</html>

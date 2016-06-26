@@ -1,0 +1,197 @@
+body{background:none #f7f7f7;}
+.faxian_g_icon{display: block;background: url(../images/new_faxian_global.png) no-repeat;}
+.faxian_prev{background-position:0 0;width:24px;height:30px;}
+.faxian_next{background-position:-32px 0;width:24px;height:30px;}
+
+em.btnXXX{display:block;background: url(../images/new_faxian_global.png) no-repeat; position:absolute; top:200px; cursor: pointer;}
+em.prevList{background-position:0 0;width:24px;height:30px; left:20px;}
+em.nextList{background-position:-32px 0;width:24px;height:30px; right:20px;}
+
+.faxian_track_point{background-position:-344px 0;width:10px;height:10px;}
+.faxian_track_point.active{background-position:-365px 0;width:10px;height:10px;}
+.faxian_top_nav_cur{background-position:-73px 0;width:145px;height:10px;}
+.faxian_rec_mask{background-position:-388px 0;width:220px;height:30px;}
+.faxian_tag_mask{background-position:-251px 0;width:78px;height:39px;}
+.faxian_buy_mask{background-position:-625px 0;width:80px;height:24px;}
+.faxian_like_icon{background-position:-225px 0;width:14px;height:14px; }
+.faxian_rec_yifu_mask_icon{background-position:-715px 0;width:193px;height:45px; }
+.find_top_box{height:390px;background:#fff;}
+.find_top_box .find_top_left{width:270px;padding:15px;height:350px;}
+.find_top_box .find_top_left .unit{border-bottom:1px solid #e8e8e8;margin-bottom:10px;}
+.find_top_box .find_top_left .unit.last{border:0;}
+.find_top_box .find_top_left .unit .category{font-size:14px;color:#ff5772;width:60px;}
+.find_top_box .find_top_left .unit .category a{ text-decoration:none;}
+.find_top_box .find_top_left .unit .category a:hover{ text-decoration:none; color:#E82573;}
+.find_top_box .find_top_left .unit .tag_box{margin-left:5px;width:205px;}
+.find_top_box .find_top_left .unit .tag_box a{color:#666;display:inline-block;margin-right:10px;margin-bottom:15px;}
+.find_top_box .find_top_right{width:895px;padding:5px 5px 5px 0;height:380px;}
+.find_banner_box{width:635px;height:325px;position:relative;}
+.banner_items{width:635px;height:325px;overflow:hidden;position:relative;}
+.banner_items .items{width:2000em;height:325px;position:absolute;}
+.banner_items .item{width:635px;height:325px;}
+.banner_items .item img{width:635px;height:325px;}
+.find_banner_box .faxian_prev{position:absolute;top:150px;left:0;}
+.find_banner_box .faxian_next{position:absolute;top:150px;right:0;}
+.find_banner_box .track_point-box{position:absolute;bottom:6px;left:304px;}
+.banner-botom-box{height:45px;background:#fafafa;padding:5px;}
+.banner-botom-box .unit{width:162px;padding:0 5px;}
+.banner-botom-box .unit img{background:none;}
+.banner-botom-box .unit .pinkc{color:#fda3b0;display:block;}
+.banner-botom-box .unit .fs14{color:#111111}
+.find_new_baobei_box{margin-top:25px;}
+.find_new_baobei_box h2{font-size:18px;color:#ff5772;}
+.find_new_baobei_box .new_baobei_box{width:1200px;padding:5px 0 5px 0;height:450px;background:url(../images/fc_50_50.png) repeat;margin-top:15px;position:relative;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items{width:1200px;height:426px;overflow:hidden;position:relative;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .items{width:2000em;position:absolute;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item{width:1200px; overflow:hidden;}
+.item ul{ overflow:hidden;width:9999em;position:relative;}
+.item ul li{ width:193px; height:426px; overflow:hidden; float:left; display:inline-block; margin-right:7px;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a{margin-left:6px;width:193px;height:426px;position:relative;text-decoration:none;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a .faxian_g_icon{position:absolute;left:0;bottom:0;text-align:center;height:22px;overflow:hidden;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a:hover .faxian_g_icon{height:45px;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a .faxian_g_icon span{display:block;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a .faxian_g_icon span{color:#ff5772;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a .faxian_g_icon .first_span{margin-top:1px;}
+.find_new_baobei_box .new_baobei_box .new_baobei_items .item a .faxian_g_icon span.fs14{color:#343434;margin-top:0px; padding-bottom:5px;}
+.find_new_baobei_box .new_baobei_box .faxian_prev{position:absolute;top:200px;left:0;}
+.find_new_baobei_box .new_baobei_box .faxian_next{position:absolute;top:200px;right:0;}
+.find_new_baobei_box .new_xiezi_box{width:1178px;padding:5px 11px;background:url(../images/fc_50_50.png) repeat;margin-top:15px;}
+.find_new_baobei_box .new_xiezi_box .unit{width:230px;margin-left:7px;height:482px;}
+.find_new_baobei_box .new_xiezi_box .unit.first{margin-left:0;}
+.find_new_baobei_box .new_xiezi_box .unit .pic-a{display:block;position:relative;}
+.find_new_baobei_box .new_xiezi_box .unit .pic-a .mask{width:230px;display:block;position:absolute;left:0;bottom:0;background: #000;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;text-align:center;display:none;}
+.find_rec_baobei_box{margin-top:30px;padding:0 25px;height:350px;background:url(../images/fd_50_50.png) repeat;width:1150px;}
+.find_rec_baobei_box h2{font-size:18px;color:#ff5772;}
+.find_rec_baobei_box .rec_baobei_box{margin-top:15px;}
+.find_rec_baobei_box .rec_baobei_box .unit{width:220px;margin-right:10px;height:284px;border:1px solid #fff;position:relative;}
+.find_rec_baobei_box .rec_baobei_box .unit.last{margin-right:0;}
+.find_rec_baobei_box .rec_baobei_box .unit .faxian_rec_mask{position:absolute;bottom:0;left:0;font-size:14px;text-align:center;color:#666;line-height:30px;}
+.find_rec_baobei_box .rec_baobei_box .unit .faxian_tag_mask{position:absolute;bottom:17px;left:70px;text-align:center;line-height:33px;font-size:16px;color:#ff5772;padding-top:12px;}
+.find_all_cate_box{margin-top:40px;}
+.find_all_cate_box .cate_top{background:#fff;padding:0 20px;width:1160px;height:40px;line-height:40px;border-bottom:1px solid #f7f7f7;}
+.find_all_cate_box .cate_top h2{font-size:16px;color:#333;}
+.find_all_cate_box .unit{width:1200px;background:#fff;height:40px;line-height:40px;border-bottom:1px solid #f7f7f7;}
+.find_all_cate_box .unit h3{font-size:14px;color:#ff5772;width:115px;padding-left:20px;background:#fff5f5;}
+.find_all_cate_box .unit .unit_fr{width:1065px;background:#fff;}
+.find_all_cate_box .unit .unit_fr a{display:inline-block;margin-left:20px;color:#666;}
+.find_all_cate_box .unit .unit_fr a.on{color:#ff5772;}
+.find_sort_box{margin-top:30px;margin-bottom:20px;height:30px;line-height:30px;}
+.find_sort_box h3{font-size:16px;}
+.find_sort_box h4{font-size:14px;}
+.find_sort_box .sort_unit{color:#dedede;background:#e8e8e8;margin-left:10px;height:30px;line-height:30px;}
+.find_sort_box .sort_unit span{color:#999;}
+.find_sort_box .sort_unit a{ padding:0 6px;color:#666;text-decoration:none}
+.find_sort_box .sort_unit .on{color:#ee2266;}
+.range-box{background:#e8e8e8;float:left;color:#dedede;margin-left:10px;}
+.range-box span{color:#999;}
+.range-box a{ padding:0 6px;color:#666;text-decoration:none}
+.range-box #J_RSInput,.range-box #J_REInput{margin:0 6px;border:0;width:30px;font-size:12px;}
+.range-box .on{color:#ee2266;}
+.range-box .range-button{border:0;display: none;background-image: url("../images/button.png");background-position: -5px -241px; border: 1px solid #DEDEDE;color: #666666;border-radius: 3px 3px 3px 3px;cursor: pointer; font-size: 12px;padding: 2px 14px;margin:3px 6px 0; float:right;}
+
+.faxian_goods_wall{position:relative;min-height:500px;width:955px;float:left; }
+.faxian_goods_wall .f_goods{position:absolute;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding-bottom:1px;border-left:1px solid #fff;border-right:1px solid #fff;box-shadow: 0 2px 0 0 #c0bfbf;-moz-box-shadow: 0 2px 0 0 #c0bfbf; }
+.faxian_goods_wall .f_goods.current{-webkit-box-shadow:0 3px 10px rgba(0,0,0,.3);box-shadow:0 3px 10px rgba(0,0,0,.3);}
+.faxian_goods_wall .f_goods .pic_a{width:224px;display:block;position:relative;margin-top:1px;overflow:hidden;}
+.faxian_goods_wall .f_goods .pic_a img{width:224px;border-radius:3px 3px 0 0;}
+.faxian_goods_wall .f_goods .pic_a .faxian_buy_mask{position:absolute;bottom:-1px;left:10px;line-height:24px;text-align:center;font-size:14px;color:#666;}
+.faxian_goods_wall .f_goods .price_like_box{width:214px;padding:0 5px;padding:20px 0;}
+.faxian_goods_wall .f_goods .price_like_box .price{font-size:18px;color:#ff5772;display:block;margin-top:-5px;}
+.faxian_goods_wall .f_goods .price_like_box .discount-btn{height:15px;width: 35px;border-radius: 2px;text-align: center;display: inline-block;line-height: 15px;background: #86B835;color:#fff;}
+.faxian_goods_wall .f_goods .title_box{width:214px;padding:0 5px 15px 5px;}
+.faxian_goods_wall .f_goods .comment_box{background:#fbfbfb;width:224px;}
+.faxian_goods_wall .f_goods .comment_box .unit{padding:10px 0;width:204px;border-top:1px dotted #ddd;margin:0 auto;}
+.faxian_goods_wall .f_goods .comment_box .comment{color:#999;width:169px;}
+.faxian_goods_wall .f_goods .comment_box .comment a{color:#999;width:169px;display:inline-block;}
+.faxian_goods_wall .f_goods .comment_box .comment_num_box{height:30px;line-height:30px;text-align:center;border-top:1px dotted #ddd;width:204px;margin:0 auto;}
+.faxian_goods_wall .f_goods .comment_box .comment_num_box a{color:#999;}
+.faxian_goods_wall .f_goods .like_unit_box{min-width:30px;}
+.f_goods_fill{position:absolute;width:226px;background:#fbfbfb;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.faxian_goods_cpc{width:226px;float:right;min-height:500px;    }
+.faxian_goods_cpc .f_goods{background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding-bottom:1px;border-left:1px solid #fff;border-right:1px solid #fff;box-shadow: 0 2px 0 0 #c0bfbf;-moz-box-shadow: 0 2px 0 0 #c0bfbf;margin-bottom:20px }
+.faxian_goods_cpc .f_goods.current{-webkit-box-shadow:0 3px 10px rgba(0,0,0,.3);box-shadow:0 3px 10px rgba(0,0,0,.3);}
+.faxian_goods_cpc .f_goods .pic_a{width:224px;display:block;position:relative;margin-top:1px;overflow:hidden;}
+.faxian_goods_cpc .f_goods .pic_a img{width:224px;border-radius:3px 3px 0 0;}
+.faxian_goods_cpc .f_goods .pic_a .faxian_buy_mask{position:absolute;bottom:-1px;left:10px;line-height:24px;text-align:center;font-size:14px;color:#666;}
+.faxian_goods_cpc .f_goods .price_like_box{width:214px;padding:0 5px;padding:20px 0;}
+.faxian_goods_cpc .f_goods .price_like_box .price{font-size:18px;color:#ff5772;display:block;margin-top:-5px;}
+.faxian_goods_cpc .f_goods .price_like_box .discount-btn{height:15px;width: 35px;border-radius: 2px;text-align: center;display: inline-block;line-height: 15px;background: #86B835;color:#fff;}
+.faxian_goods_cpc .f_goods .title_box{width:214px;padding:0 5px 15px 5px;}
+.faxian_goods_cpc .f_goods .comment_box{background:#fbfbfb;width:224px;}
+.faxian_goods_cpc .f_goods .comment_box .unit{padding:10px 0;width:204px;border-top:1px dotted #ddd;margin:0 auto;}
+.faxian_goods_cpc .f_goods .comment_box .comment{color:#999;width:169px;}
+.faxian_goods_cpc .f_goods .comment_box .comment a{color:#999;width:169px;display:inline-block;}
+.faxian_goods_cpc .f_goods .comment_box .comment_num_box{height:30px;line-height:30px;text-align:center;border-top:1px dotted #ddd;width:204px;margin:0 auto;}
+.faxian_goods_cpc .f_goods .comment_box .comment_num_box a{color:#999;}
+.faxian_goods_cpc .f_goods .like_unit_box{min-width:30px;}
+
+/************************************New_Pro-Action****************************************/
+.brand-list{width:1200px;margin:15px auto 0 auto;position:relative; background:#F7F7F7; overflow:hidden;}
+.brand-list .item{position:absolute;width:224px;background-color:#FFF;border:1px solid #f8f8f8;padding:0;top:0;left:40%;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+.brand-list .hover{box-shadow:0px 1px 8px #FFF5F5;background-color:#fff;border-color:#EE2266;}
+.brand-list .additem{padding:0;width:224px;border:none;}
+<!--.proMain{ width:1200px; overflow:hidden; height:auto;}-->
+.proMain .f_goods{background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding-bottom:1px;border-left:1px solid #fff;border-right:1px solid #fff;box-shadow: 0 2px 0 0 #c0bfbf;-moz-box-shadow: 0 2px 0 0 #c0bfbf; overflow:hidden; height:auto;}
+.proMain .f_goods.current{-webkit-box-shadow:0 3px 10px rgba(0,0,0,.3);box-shadow:0 3px 10px rgba(0,0,0,.3);}
+.proMain .f_goods .pic_a{width:224px;display:block;position:relative;margin-top:1px;overflow:hidden;}
+.proMain .f_goods .pic_a img{width:224px;border-radius:3px 3px 0 0;}
+.proMain .f_goods .pic_a .faxian_buy_mask{position:absolute;bottom:-1px;left:10px;line-height:24px;text-align:center;font-size:14px;color:#666;}
+.proMain .f_goods .price_like_box{width:214px;padding:0 5px;padding:20px 0;}
+.proMain .f_goods .price_like_box .price{font-size:18px;color:#ff5772;display:block;margin-top:-5px;}
+.proMain .f_goods .price_like_box .discount-btn{height:15px;width: 35px;border-radius: 2px;text-align: center;display: inline-block;line-height: 15px;background: #86B835;color:#fff;}
+.proMain .f_goods .title_box{width:214px;padding:0 5px 15px 5px;}
+.proMain .f_goods .comment_box{background:#fbfbfb;width:224px;}
+.proMain .f_goods .comment_box .unit{padding:10px 0;width:204px;border-top:1px dotted #ddd;margin:0 auto;}
+.proMain .f_goods .comment_box .comment{color:#999;width:169px;}
+.proMain .f_goods .comment_box .comment a{color:#999;width:169px;display:inline-block;}
+.proMain .f_goods .comment_box .comment_num_box{height:30px;line-height:30px;text-align:center;border-top:1px dotted #ddd;width:204px;margin:0 auto;}
+.proMain .f_goods .comment_box .comment_num_box a{color:#999;}
+.proMain .f_goods .like_unit_box{min-width:30px;}
+
+/************************************New_Pro-End****************************************/
+
+/*分页*/
+.pagin a{border:1px solid #ee2266;background:#ee2266;color:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.pagin span{border:0;background:none;}
+.pagin span.current{border:0;background:none;color:#ee2266;} 
+/*标签页*/
+.faxian_tag_icon{display: block;background: url(../images/find_tag_icon_2014.png) no-repeat;}
+.faxian_tag_icon.tag_yifu{background-position:-25px -20px;width:28px;height:45px;}
+.faxian_tag_icon.tag_xiezi{background-position:-20px -95px;width:39px;height:38px;}
+.faxian_tag_icon.tag_baobao{background-position:-22px -160px;width:34px;height:42px;}
+.faxian_tag_icon.tag_peishi{background-position:-24px -226px;width:27px;height:46px;}
+.faxian_tag_icon.enter_icon{background-position:-86px -54px;width:10px;height:14px;}
+.faxian_tag_icon.enter_icon.current{background-position:-86px -36px;width:10px;height:14px;}
+.find_tag_header{width:1188px;padding:6px;background:#fff;height:280px;}
+.find_tag_header .cate_box{}
+.find_tag_header .cate_box .unit{width:160px;height:69px;line-height:69px;background:#fff6fa;border-bottom:1px dashed #ff86b8;font-size:18px;border-right:1px solid #ff86b8;}
+.find_tag_header .cate_box .unit.last{border-bottom:none;}
+.find_tag_header .cate_box .unit.current{border:1px solid #ff86b8;border-right:1px solid #fff;}
+.find_tag_header .cate_main_box{width:745px;height:278px;border:1px solid #ff86b8;border-left:0;margin-left:-1px;}
+.find_tag_header .cate_main_box .cate_main_tag_box{width:500px;margin-left:34px;}
+.find_tag_header .cate_main_box .cate_main_tag_box .tag_unit{margin-top:15px;}
+.find_tag_header .cate_main_box .cate_main_tag_box h3{font-size:16px;color:#ff5793;font-weight:bold;}
+.find_tag_header .cate_main_box .cate_main_tag_box .sub_tag_box a{color:#666;display:block;margin-top:15px;margin-right:17px;font-size:14px;}
+.find_tag_header .cate_main_box .cate_main_tag_box .sub_tag_box a.emphasize{background:#ff5793;color:#fff;font-weight:bold;padding:0px 4px;border-radius:3px;}
+.find_tag_header .cate_main_box .cate_main_tag_box .sub_tag_box a em{color:#ff4b8b;}
+.find_tag_header .cate_main_box .cate_main_tag_box .sub_tag_box a.emphasize em{color:#fff;}
+.find_tag_header .cate_main_box .cate_main_tag_box .sub_tag_box a:hover{text-decoration:none;}
+.find_tag_header .cate_sidebar{width:281px;}
+.find_tag_header .cate_box .unit a{color:#666;}
+.find_tag_header .cate_box .unit.current a{color:#ff60a2;}
+.find_tag_header .cate_box .unit .bigfs{margin-left:15px;}
+.find_tag_header .cate_box .unit .tag_yifu{margin-top:10px;margin-left:25px;}
+.find_tag_header .cate_box .unit .tag_xiezi{margin-top:10px;margin-left:15px;}
+.find_tag_header .cate_box .unit .tag_baobao{margin-top:10px;margin-left:18px;}
+.find_tag_header .cate_box .unit .tag_peishi{margin-top:10px;margin-left:20px;}
+.find_tag_header .cate_box .unit .enter_icon{margin-top:28px;margin-left:15px;}
+.find_tag_header .cate_box .unit.current .enter_icon{background-position:-86px -36px;width:10px;height:14px;}
+.find_tag_header .cate_box .unit .peishi_title{margin-left:20px;}
+.find_tag_header .cate_sidebar .relative_tag_box{border:1px solid #eeeeee;width:230px;border-left:0;padding:10px 25px;height:98px;}
+.find_tag_header .cate_sidebar .relative_tag_box h2{font-size:22px;text-align:center;}
+.find_tag_header .cate_sidebar .relative_tag_box h2 em{color:#f11a64;}
+.find_tag_header .cate_sidebar .relative_tag_box .relative_tag_a_box a{font-size:14px;color:#333;display:inline-block;margin-right:10px;line-height:22px;}
+.find_tag_header .cate_sidebar .relative_tag_box .relative_tag_a_box a.emphasize{background:#ff5793;color:#fff;font-weight:bold;padding:0 4px;border-radius:3px;}
+.find_tag_header .cate_sidebar .relative_topic_box{background:url(../images/relative_top_bg_15_9.png) repeat;width:281px;height:166px;}
+.find_tag_header .cate_sidebar .relative_topic_box h2{font-size:24px;text-align:center;padding:8px 0 6px 0;}
+

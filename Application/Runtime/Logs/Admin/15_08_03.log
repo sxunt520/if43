@@ -1,0 +1,19 @@
+[ 2015-08-03T00:02:36+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+
+[ 2015-08-03T00:02:45+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+SQL: SHOW COLUMNS FROM `if43_admin` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `if43_admin` WHERE `email` = 'vip@IF43.com' AND `password` = '9c59eddb58ba5f4256322ebd4f6ea1e8' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2015-08-03T22:46:44+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `if43_admin` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `if43_admin` WHERE `email` = 'vip@IF43.com' AND `password` = '9c59eddb58ba5f4256322ebd4f6ea1e8' LIMIT 1   [ RunTime:0.0006s ]
+

@@ -1,0 +1,36 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">权限列表</a><span class="crumb-step">&gt;</span><span>添加管理权限</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th>Name-(控制器/方法)：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="name" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Title-(中文名称)</th>
+                                <td><input class="common-text" name="title" size="50" type="text"></td>
+                            </tr>
+                          
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+</block>          

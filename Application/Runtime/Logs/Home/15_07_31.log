@@ -1,0 +1,22 @@
+[ 2015-07-31T17:00:12+08:00 ] 127.0.0.1 /Home/Detail/comment
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001599s ]
+SQL: SHOW COLUMNS FROM `if43_category` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `if43_pro` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `if43_pro` WHERE ( is_onsale=1 AND is_examine=1 AND is_best=1  AND is_hot=1 AND is_new=1 ) ORDER BY add_time DESC LIMIT 4   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `if43_category` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `if43_category`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `if43_pro` WHERE ( cat_id in (5,8,9,10,11,12,13,14,15,16,17,18,19,20,6,21,22,23,24,25,26,27,28,29,30,31,32,33,7,34,35,36,37,38,39,40,41,42,43,44,45,46,1) AND is_onsale=1 AND is_examine=1 AND is_best=1  AND is_hot=1 ) ORDER BY pro_order DESC,pro_id DESC LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `if43_category`  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `if43_pro` WHERE ( cat_id in (47,50,51,52,53,54,55,56,57,58,59,60,61,48,62,63,64,65,66,67,68,69,70,71,72,73,49,75,76,77,78,79,80,81,82,83,84,85,2) AND is_onsale=1 AND is_examine=1 AND is_best=1  AND is_hot=1 ) ORDER BY pro_order DESC,pro_id DESC LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `if43_category`  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `if43_pro` WHERE ( cat_id in (86,89,90,91,92,93,94,95,96,97,98,99,100,101,87,102,103,104,105,106,107,108,109,110,111,112,113,88,114,115,116,117,118,119,120,121,122,123,124,125,126,127,3) AND is_onsale=1 AND is_examine=1 AND is_best=1  AND is_hot=1 ) ORDER BY pro_order DESC,pro_id DESC LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `if43_category`  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `if43_pro` WHERE ( cat_id in (128,131,132,133,134,135,136,137,138,139,140,160,129,141,142,143,144,145,146,147,148,149,130,150,151,152,153,154,155,156,157,158,159,4) AND is_onsale=1 AND is_examine=1 AND is_best=1  AND is_hot=1 ) ORDER BY pro_order DESC,pro_id DESC LIMIT 4   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `if43_comment` [ RunTime:0.0029s ]
+SQL: INSERT INTO `if43_comment` (`content`,`uid`,`username`,`pro_id`,`time`) VALUES ('轻便而且很耐用！','0','匿名','51','1438333212') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `if43_member` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `if43_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: str D:\web\IF43\Application\Home\Controller\DetailController.class.php 第 59 行.
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>如果时尚！爱否时尚-发现喜欢-不外出逛街一样可以发现自己喜欢的!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="如果，时尚，爱否，购物分享，购物社区">
+<meta name="description" content="如果，从这里开始，发现喜欢，改变生活。我们为你推荐适合的消费，是你购物决策的贴心助理。整合商品信息、网友评价，服务质量和价格比较。">
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/new_find_2014.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript"></script>
+<script src="/Public/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script>
+</head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+<div class="layout1200">
+	<div class="clearfix find_top_box">
+		<div class="find_top_left fl">
+                            <div class="unit clearfix ">
+                                <span class="category fl"><a href="__URL__/prolist/cat_id/5">上衣</a></span>
+                                <div class="tag_box fr">
+                                    <volist name="subCat1" id="vo">
+                                        <a href="__URL__/prolist/cat_id/{$vo.cat_id}" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                                      </volist>
+                                </div>
+                            </div>
+                                <div class="unit clearfix ">
+                                   	 <span class="category fl"><a href="__URL__/prolist/cat_id/7">裙子</a></span>
+                                    <div class="tag_box fr">
+                                        <volist name="subCat3" id="vo">
+                                          <a href="__URL__/prolist/cat_id/{$vo.cat_id}" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                                          </volist>
+                                    </div>
+                                </div>
+                                <div class="unit clearfix ">
+                                    <span class="category fl"><a href="__URL__/prolist/cat_id/6">裤子</a></span>
+                                    <div class="tag_box fr">
+                                        <volist name="subCat2" id="vo">
+                                          <a href="__URL__/prolist/cat_id/{$vo.cat_id}" <if condition="$vo['is_tj'] eq 1" >class="on"<else /></if>>{$vo.cat_name}</a>
+                                          </volist>
+                                    </div>
+                                </div>
+                                <div class="unit clearfix last">
+                                    <span class="category fl">适用场景</span>
+                                    <div class="tag_box fr">
+                                        <volist name="subCat5" id="vo">
+                                        <a class="tag-item" href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/{$priceTop}/fg/{$fg}/fashion/{$fashion}/cj/{$vo}#tagB">{$vo}</a>
+                                         </volist>
+                                    </div>
+                                </div>
+								</div>
+                    <div class="find_top_right fr">
+                        <div class="clearfix">
+                            <div class="find_banner_box fl">
+                                <div id="kinMaxShow">
+                                    <volist name="focus" id="vo">
+                                        <div><a href="{$vo.jumpurl}" target="_blank" title="{$vo.title}"><img src="/Public/uploads/{$vo.advimg}"/></a></div>
+                                    </volist>
+                                </div>
+                            </div>
+                     		   <a href="{$newPic.jumpurl}" title="{$newPic.title}" target="_blank">
+                                <img src="/Public/uploads/{$newPic.advimg}" class="fr" alt="{$newPic.title}" height="330" width="255">
+                                </a>
+                        </div>
+                        <div class="banner-botom-box clearfix">
+                        
+                        <volist name="proRows1" id="vo">
+                            <div class="unit fl">
+                                 <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" title="{$vo.pro_title}" target="_blank">
+                                 	<img title="{$vo.pro_title}" src="/Public/uploads/{$vo.img45x45}" class="fl" height="45" width="45">
+                                 </a>
+                                <div class="fl ml5">
+                                     <a class="pinkc mt5" href="__URL__/prolist/cat_id/{$vo.cat_id}" target="_blank">{$vo.cat_name}</a>
+                                     <div class="mt5 "><a class="fs14" href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">{$vo.pro_name}</a></div>
+                                </div>
+                            </div>
+                        </volist>
+                        
+                        </div>
+                    </div>
+                </div>
+	
+	<div class="find_new_baobei_box">
+		<h2 class="bigfs">今日上新</h2>
+            <div class="new_baobei_box">
+                <div class="new_baobei_items">
+ 
+                            <div class="item itemList">
+                            	<ul>
+                                <volist name="proRows2" id="vo">
+                                    <li>
+                                        <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" title="{$vo.pro_title}" target="_blank" class="fl">
+                                            <img src="/Public/uploads/{$vo.img_new}" alt="{$vo.pro_title}" height="426" width="193">
+                                            <span class="faxian_g_icon faxian_rec_yifu_mask_icon">
+                                            <span class="first_span">◆&nbsp;&nbsp;<em class="fs16 bigfs">{$vo.cat_name}</em>&nbsp;&nbsp;◆</span>
+                                            <span class="fs14 bigfs">{$vo.pro_name}</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                  </volist>  
+                            </ul>
+                                <em class="btnXXX prevList" herf="javascript:;"></em>
+                                <em class="btnXXX nextList" herf="javascript:;"></em>
+                            </div>
+                          
+                </div>
+                </div>
+			</div>
+	
+	<div class="find_rec_baobei_box">
+		<div class="faxian_g_icon faxian_top_nav_cur"></div>
+			<h2 class="bigfs">小编精选衣服推荐</h2>
+                    <div class="rec_baobei_box clearfix">
+                    
+                    <volist name="proRows3" id="vo" mod="5">
+                        <div class="unit fl <eq name="mod" value="4">last</eq>">
+                            <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" title="{$vo.pro_title}" target="_blank">
+                            	<img src="/Public/uploads/{$vo.img220x284}" alt="{$vo.pro_title}" height="284" width="220">
+                            </a>
+                            <div class="faxian_g_icon faxian_tag_mask bigfs">{$vo.cat_name}</div>
+                            <div class="faxian_g_icon faxian_rec_mask bigfs">{$vo.pro_name}</div>
+                        </div>
+                    </volist>
+                    
+               </div>
+            </div>
+	
+     <a name="tagB" id="tagB"></a>
+	<div class="find_all_cate_box">
+            <div class="cate_top">
+           		 <h2 class="bigfs">类目筛选区</h2>
+            </div>
+                    <div class="unit clearfix">
+                    <h3 class="fl bigfs">热门品类</h3>
+                        <div class="unit_fr fr">
+                        	<a class="tag-item  <if condition="$cat_id eq 1" >on<else /></if>" href="__URL__/index/cat_id/1/top/{$top}/priceTop/{$priceTop}/fg/{$fg}/fashion/{$fashion}#tagB">全部</a>
+                            <volist name="tj1" id="vo">
+                              <a class="tag-item  <if condition="$vo['cat_id'] eq $cat_id" >on<else /></if>" href="__URL__/index/cat_id/{$vo.cat_id}/top/{$top}/priceTop/{$priceTop}/fg/{$fg}/fashion/{$fashion}#tagB">{$vo.cat_name}</a>
+                            </volist>
+                          </div>
+                    </div>
+						<div class="unit clearfix">
+						<h3 class="fl bigfs">潮流风格</h3>
+                        <div class="unit_fr fr">
+                        		<a class="tag-item  <if condition="$fg eq 'all'" >on<else /></if>" href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/{$priceTop}/fg/all/fashion/{$fashion}#tagB">全部</a>
+                                <volist name="subCat4" id="vo" offset="0" length='20'>
+                            	  <a class="tag-item  <if condition="$vo eq $fg" >on<else /></if>" href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/{$priceTop}/fg/{$vo}/fashion/{$fashion}#tagB">{$vo}</a>
+                               </volist>
+                            </div>
+                        </div>
+						<div class="unit clearfix">
+                        <h3 class="fl bigfs">流行元素</h3>
+                        <div class="unit_fr fr">
+                        			<a class="tag-item <if condition="$fashion eq 'all'" >on<else /></if>" href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/{$priceTop}/fg/{$fg}/fashion/all#tagB">全部</a>
+                                    <volist name="subCat6" id="vo" offset="0" length='20'>
+                                 <a class="tag-item <if condition="$vo eq $fashion" >on<else /></if>" href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/{$priceTop}/fg/{$fg}/fashion/{$vo}#tagB">{$vo}</a>
+                                   </volist>
+                                </div>
+                           </div>
+                      </div>
+	
+      <div class="find_sort_box clearfix">
+        <h3 class="fl"><a href="__URL__/index/cat_id/{$nowCatName.cat_id}/#tagB">{$nowCatName.cat_name}</a></h3>
+        <span class="fs14 ml5 mr5 fl">&gt;</span>
+            <div class="sort_unit fl ml40">
+            <a href="__URL__/index/cat_id/{$cat_id}/top/hot/priceTop/{$priceTop}/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$top eq 'hot' ">class='on'<else /></if>>热门</a>|
+            <a href="__URL__/index/cat_id/{$cat_id}/top/new/priceTop/{$priceTop}/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$top eq 'new' ">class='on'<else /></if>>最新</a>
+            </div>
+         <div class="range-box">
+            <form method="get" action="__URL__/index/cat_id/{$cat_id}/top/{$top}/fg/{$fg}/fashion/{$fashion}#tagB" class="showHide">
+              <!--这里被选择中添加class="on"-->
+         <a href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/all/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$priceTop eq 'all' ">class='on'<else /></if>>全部</a>|
+         <a href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/100/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$priceTop eq '100' ">class='on'<else /></if>>100元</a>|
+         <a href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/200/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$priceTop eq '200' ">class='on'<else /></if>>200元</a>|
+         <a href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/300/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$priceTop eq '300' ">class='on'<else /></if>>300元</a>|
+         <a href="__URL__/index/cat_id/{$cat_id}/top/{$top}/priceTop/300x/fg/{$fg}/fashion/{$fashion}#tagB" <if condition="$priceTop eq '300x' ">class='on'<else /></if>>300以上</a>|
+                <input name="minPrice" id="J_RSInput" type="text" value="{$minPrice}">-<input name="maxPrice" id="J_REInput" type="text" value="{$maxPrice}">
+                <input style="display: none;" value="确定" class="range-button showHideIng" type="submit">
+            </form>
+          </div>
+	</div>
+
+ <div class="brand-list" id="brand-waterfall">
+ 
+	<volist name="proList" id="vo">
+        <div class="item proMain" id="brand-{$vo.pro_id}">
+                <div class="f_goods">
+                    <a class="pic_a" href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank"><img src="/Public/uploads/{$vo.img250x250}" alt="{$vo.pro_title}" width="224"></a>
+                    <div class="price_like_box clearfix">
+                        <span class="price fl bigfs">￥{$vo.pro_price}</span><del class="ml5 fl">￥{$vo['pro_price']+28}</del><span class="discount-btn fl ml5">{$vo['price_trend']/10}折</span>
+                        <span class="fr like_unit_box"><a href="javascript:;" class="faxian_g_icon faxian_like_icon fl"></a><span class="fr like_count">&nbsp;&nbsp;5</span></span>
+                    </div>
+                    <div class="title_box ofh">{$vo.pro_title}</div>
+                    <div class="comment_box">
+                    	
+                        	<assign name="num" value="0" />
+                    	<volist name="commentRows" id="vo2">
+                            <if condition="$vo2['pro_id'] eq $vo['pro_id']">
+                            <assign name="num" value="$num+1" />
+                            	<in name="num" value="1,2,3">
+                                    <div class="unit clearfix">
+                                        <img src="/Public/uploads/{$vo2.img180x180}" alt="{$vo.username}" title="{$vo.username}" class="fl" width="25">
+                                        <div class="fl ml10 comment">
+                                        <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank" class="ofh">
+                                        {$var}{$vo2.content}
+                                        </a>
+                                        </div>
+                                    </div>
+                                </in>
+                            <else /></if>    
+                         </volist>   
+                         
+                        <div class="comment_num_box">
+                            <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">查看全部评价({$num})</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </volist>
+</div>
+
+<div class="tac mt20 clearfix">
+    <div class="pagin inlineblock clearfix">
+        {$spage}
+    </div>
+</div>
+
+</div>
+<include file="./Application/Home/View/Public/footer.html" />
+</body>
+</html>

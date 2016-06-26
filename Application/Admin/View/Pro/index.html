@@ -1,0 +1,188 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">精品列表</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="__URL__/index" name="searchform" method="get">
+                    <table class="search-tab">
+                        <tr>
+                        	<th width="75">选择分类:</th>
+                            <td width="320">
+                                <div class="controls">
+                                        <select style="height:30px;" id="p" name="first">
+                                            <option value="">一级分类</option>
+                                            <volist name="data" id="vo">
+                                                <option value="{$vo['cat_id']}" <if condition="$vo['cat_id'] eq $map['first']">selected='selected'<else /></if>>{$vo['cat_name']}</option>					
+                                            </volist>
+                                        </select>
+                                        <select style="height:30px; width:134px;" id="c" name="second">
+                                            <option value="">二级分类</option>
+                                        </select>
+                                        <select style="height:30px;" name="cid" id="d">
+                                            <option value="">三级分类</option>					
+                                        </select>
+                                </div>
+                            </td>
+                            <th>推荐：</th>
+                            <td>
+                            <!-- 推荐 -->
+                                        <select style="height:30px;" name="intro_type">
+                                            <option value="">全部</option>
+                                            <option value="is_examine" <if condition="$map['intro_type'] eq 'is_examine'">selected='selected'<else /></if>>审核</option>
+                                            <option value="is_best" <if condition="$map['intro_type'] eq 'is_best'">selected='selected'<else /></if>>精品</option>
+                                            <option value="is_new" <if condition="$map['intro_type'] eq 'is_new'">selected='selected'<else /></if>>新品</option>
+                                            <option value="is_hot" <if condition="$map['intro_type'] eq 'is_hot'">selected='selected'<else /></if>>Hot</option>
+                                            <option value="all_type" <if condition="$map['intro_type'] eq 'all_type'">selected='selected'<else /></if>>全部推荐</option>
+                                        </select>
+                                        <!-- 上架 -->
+                                        <select style="height:30px;"  name="is_on_sale">
+                                            <option value=""  <if condition="$map['is_on_sale'] eq ''">selected='selected'<else /></if>>全部</option>
+                                            <option value="1" <if condition="$map['is_on_sale'] eq '1'">selected='selected'<else /></if>>上架</option>
+                                            <option value="0" <if condition="$map['is_on_sale'] eq '0'">selected='selected'<else /></if>>下架</option>
+                                            <!--这里判断的必需用引号引起 如果判断值是0 或 1 的话！~-->
+                                        </select>
+                            </td>
+                            <th width="70">关键字:</th>
+                            <td><input class="common-text" placeholder="请输入精品关键词" name="keywords" value="{$map.keywords}" id="" type="text"></td>
+                            <td><input class="btn btn-primary btn2" value="搜索" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <form name="myform" action="__CONTROLLER__/deleteall" id="myform" method="post">
+        <div class="result-wrap">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="__URL__/add"><i class="icon-font"></i>添加精品</a>
+                        <!--<a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>-->
+                        <input type="submit" name="action" value="更新排序">&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
+                            <th>排序</th>
+                            <th>ID</th>
+                            <th>缩略图</th>
+                            <th>精品名称</th>
+                            <th>价格</th>
+                            <th>审核</th>
+                            <th>精品</th>
+                            <th>新品</th>
+                            <th>Hot</th>
+                            <th>上架</th>
+                            <th>操作</th>
+                        </tr>
+                        <foreach name="proList" item="v">
+                            <tr>
+                                <td class="tc"><input name="pro_id[]" value="{$v.pro_id}" type="checkbox"></td>
+                                <td>
+                                <input name="pro_ids[]" value="{$v.pro_id}" type="hidden">
+                                <input class="common-input sort-input2" name="pro_orders[]" value="{$v.pro_order}" style="" type="text">
+                                </td>
+                                <td>{$v.pro_id}</td>
+                                <td><img src="/Public/uploads/{$v.img120x120}" width="60"/></td>
+                                <td>{$v.pro_name}</td>
+                                <td>{$v.pro_price}</td>
+                                <td><if condition="$v.is_examine eq 1 "><i class="icon-font greed">&#xe068;</i><else /><i class="icon-font red">&#xe069;</i></if></td>
+                                <td><if condition="$v.is_best eq 1 "><i class="icon-font greed">&#xe068;</i><else /><i class="icon-font red">&#xe069;</i></if></td>
+                                <td><if condition="$v.is_new eq 1 "><i class="icon-font greed">&#xe068;</i><else /><i class="icon-font red">&#xe069;</i></if></td>
+                                <td><if condition="$v.is_hot eq 1 "><i class="icon-font greed">&#xe068;</i><else /><i class="icon-font red">&#xe069;</i></if></td>
+                                <td><if condition="$v.is_onsale eq 1 "><i class="icon-font greed">&#xe068;</i><else /><i class="icon-font red">&#xe069;</i></if></td>
+                                <td>
+                                	<a href="{$v.buy_url}" title="去购买" target="_blank"><i class="icon-font">&#xe011;</i></a><span class="spanGray">|</span>
+                                    <a href="/Home/Detail/index/pro_id/{$v.pro_id}" title="查看" target="_blank"><i class="icon-font">&#xe062;</i></a><span class="spanGray">|</span>
+                                    <a href="__CONTROLLER__/edit/pro_id/{$v.pro_id}" title="修改"><i class="icon-font">&#xe065;</i></a><span class="spanGray">|</span>
+                                    <a onclick="return confirm(' 你确定要删除吗？')" title="删除" href="__CONTROLLER__/delete/pro_id/{$v.pro_id}"><i class="icon-font">&#xe019;</i></a>
+                                </td>
+                            </tr>
+                        </foreach>
+                    </table>
+                        <div class="checkAll">
+                            <button type="button">全选</button>
+                            <button type="button">反选</button>&nbsp;&nbsp;
+                            <input type="submit" name="action" value="删除" onclick="return confirm(' 你确定要删除吗？')">&nbsp;&nbsp;
+                            <input type="submit" name="action" value="审核">
+                            <input type="submit" name="action" value="取消审核">&nbsp;&nbsp;
+                            <input type="submit" name="action" value="精品">
+                            <input type="submit" name="action" value="取消精品">&nbsp;&nbsp;
+                            <input type="submit" name="action" value="新品">
+                            <input type="submit" name="action" value="取消新品">&nbsp;&nbsp;
+                            <input type="submit" name="action" value="Hot">
+                            <input type="submit" name="action" value="取消Hot">&nbsp;&nbsp;
+                            <input type="submit" name="action" value="上架">
+                            <input type="submit" name="action" value="下架">&nbsp;&nbsp;
+                        </div>      
+                    <div class="list-page">{$spage}</div>	
+                </div>
+        </div>
+     </form>
+        <script>
+              $(function () {
+                var bool = true;
+                $(':button:contains(全选),.allChoose').bind('click',function(){
+                    // 全选一定有标示状态
+                    $(':checkbox[name="pro_id[]"]').each(function(){
+                        $(this).prop('checked',bool);
+                    });
+                    bool=!bool;
+                });
+        
+                $(':button:contains(反选)').bind('click',function(){        	
+                    $(':checkbox[name="pro_id[]"]').each(function(){
+                        $(this).prop('checked',!this.checked);
+                    });
+                });
+             })
+			 
+		    // Ajax类别切换
+			var op = document.getElementById('p');
+			var oc = document.getElementById('c');
+			var od = document.getElementById('d');
+			op.onchange = dodo; 
+			oc.onchange = dodo; 
+			function dodo() {
+				var $this = this; // 缓存当前触发事件的对象
+				// 当前的ID
+				var id = this.value;
+				var url = '__URL__/sel/id/'+id; // 将所选分类ID 发送到服务器端
+				$.get(url,'',function(data) {
+					// 判断谁 能区分出当前触发事件的select 
+					console.log(data);
+					if($this.id == 'p') {
+						// 清空option元素
+						var obj = oc;
+						obj.options.length = 1;
+						$("#c").append(data);
+						od.style.display = 'none';
+					} else {
+						var obj = od;
+						obj.options.length = 1;
+						$("#d").append(data);
+						od.style.display = 'inline';
+					}
+				});
+			}
+			
+		
+		//自动加载二、三轮相关类别
+		$(document).ready(function(){
+		
+			var url = '__URL__/sel2/first/{$map.first}/second/{$map.second}/cid/{$map.cid}'; 
+			$.get(url,'',function(data) {
+					$("#c").remove();
+					$("#d").remove();
+					$(".controls").append(data);
+					//od.style.display = 'none';
+			});
+		
+		});
+
+        </script>
+</block>         

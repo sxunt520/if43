@@ -1,0 +1,182 @@
+<div class="fl cate_box">
+    <div class="unit <php> echo CONTROLLER_NAME== 'Clothes' ? 'current':'';echo CONTROLLER_NAME== 'Shoe' ? 'last':'';</php>">
+        <a href="/Home/Clothes/prolist/" class="clearfix">
+            <span class="faxian_tag_icon tag_yifu fl"></span>
+            <span class="fl bigfs">衣服</span>
+            <span class="faxian_tag_icon enter_icon fl"></span>
+        </a>
+    </div>
+    <div class="unit  <php> echo CONTROLLER_NAME== 'Shoe' ? 'current':'';echo CONTROLLER_NAME== 'Bag' ? 'last':'';</php>">
+        <a href="/Home/Shoe/prolist" class="clearfix">
+            <span class="faxian_tag_icon tag_xiezi fl"></span>
+            <span class="fl bigfs">鞋子</span>
+            <span class="faxian_tag_icon enter_icon fl"></span>
+        </a>
+    </div>
+    <div class="unit  <php> echo CONTROLLER_NAME== 'Bag' ? 'current':'';echo CONTROLLER_NAME== 'Acc' ? 'last':'';</php>">
+        <a href="/Home/Bag/prolist" class="clearfix">
+            <span class="faxian_tag_icon tag_baobao fl"></span>
+            <span class="fl bigfs">包包</span>
+            <span class="faxian_tag_icon enter_icon fl"></span>
+        </a>
+    </div>
+    <div class="unit last <php> echo CONTROLLER_NAME== 'Acc' ? 'current':'';</php>">
+        <a href="/Home/Acc/prolist" class="clearfix">
+            <span class="faxian_tag_icon tag_peishi fl"></span>
+            <span class="fl bigfs peishi_title">配饰</span>
+            <span class="faxian_tag_icon enter_icon fl"></span>
+        </a>
+    </div>
+</div>
+        
+<php>if(CONTROLLER_NAME== 'Clothes'){</php><!--如果控制器是衣服频道显示这里-->
+		<div class="fl cate_main_box" style="background-image:url(/Public/uploads/{$catBg.advimg});">
+			<div class="cate_main_tag_box bigfs">
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/5">上装</a></h3>
+                <div class="sub_tag_box clearfix">
+                <!--如果被先中添加class="emphasize" 如果有星星添加标签<em>*</em>-->
+                
+                <volist name="subCat1" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+                
+                </div>
+                </div>
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/7">裙子</a></h3>
+                <div class="sub_tag_box clearfix">
+                
+                <volist name="subCat3" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+
+                </div>
+                </div>
+                    <div class="tag_unit">
+                     <h3><a href="__URL__/prolist/cat_id/6">裤子</a></h3>
+                        <div class="sub_tag_box clearfix">
+                      
+                            <volist name="subCat2" id="vo">
+                                <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                            </volist>
+                        
+                        </div>
+                    </div>
+                </div>
+		</div>
+ <php>}</php>	
+ 
+ <php>if(CONTROLLER_NAME == 'Shoe'){</php><!--如果控制器是鞋子频道显示这里-->
+		<div class="fl cate_main_box" style="background-image:url(/Public/uploads/{$catBg.advimg});">
+			<div class="cate_main_tag_box bigfs">
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/47">款式</a></h3>
+                <div class="sub_tag_box clearfix">
+                <!--如果被先中添加class="emphasize" 如果有星星添加标签<em>*</em>-->
+                
+                <volist name="subCat1" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+                
+                </div>
+                </div>
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/48">元素</a></h3>
+                <div class="sub_tag_box clearfix">
+                
+                <volist name="subCat2" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+
+                </div>
+                </div>
+                    <div class="tag_unit">
+                     <h3><a href="__URL__/prolist/#tagB">潮流风格</a></h3>
+                        <div class="sub_tag_box clearfix">
+                      
+                            <volist name="subCat3" id="vo" offset="0" length='9'>
+                                <a class="fl <if condition="$vo eq $fg" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$cat_id}/fg/{$vo}">{$vo}</a>
+                            </volist>
+                        
+                        </div>
+                    </div>
+                </div>
+		</div>
+ <php>}</php>   
+ 
+  <php>if(CONTROLLER_NAME == 'Bag'){</php><!--如果控制器是包包频道显示这里-->
+		<div class="fl cate_main_box" style="background-image:url(/Public/uploads/{$catBg.advimg});">
+			<div class="cate_main_tag_box bigfs">
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/86">款式</a></h3>
+                <div class="sub_tag_box clearfix">
+                <!--如果被先中添加class="emphasize" 如果有星星添加标签<em>*</em>-->
+                
+                <volist name="subCat1" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+                
+                </div>
+                </div>
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/88">流行</a></h3>
+                <div class="sub_tag_box clearfix">
+                
+                <volist name="subCat2" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+
+                </div>
+                </div>
+                    <div class="tag_unit">
+                     <h3><a href="__URL__/prolist/cat_id/{$cat_id}/cz/all">材质</a></h3>
+                        <div class="sub_tag_box clearfix">
+                      
+                            <volist name="subCat3" id="vo" offset="0" length='9'>
+                                <a class="fl <if condition="$vo eq $cz" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$cat_id}/cz/{$vo}">{$vo}</a>
+                            </volist>
+                        
+                        </div>
+                    </div>
+                </div>
+		</div>
+ <php>}</php>
+ 
+  <php>if(CONTROLLER_NAME == 'Acc'){</php><!--如果控制器是配饰频道显示这里-->
+		<div class="fl cate_main_box" style="background-image:url(/Public/uploads/{$catBg.advimg});">
+			<div class="cate_main_tag_box bigfs">
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/128">首饰</a></h3>
+                <div class="sub_tag_box clearfix">
+                <!--如果被先中添加class="emphasize" 如果有星星添加标签<em>*</em>-->
+                
+                <volist name="subCat1" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+                
+                </div>
+                </div>
+                <div class="tag_unit">
+                <h3><a href="__URL__/prolist/cat_id/129">装扮</a></h3>
+                <div class="sub_tag_box clearfix">
+                
+                <volist name="subCat2" id="vo">
+                    <a class="fl <if condition="$vo['cat_id'] eq $cat_id" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}<if condition="$vo['is_tj'] eq 1" ><em>*</em><else /></if></a>
+                </volist>
+
+                </div>
+                </div>
+                    <div class="tag_unit">
+                     <h3><a href="__URL__/prolist/#tagB">材质</a></h3>
+                        <div class="sub_tag_box clearfix">
+                      
+                            <volist name="subCat3" id="vo" offset="0" length='9'>
+                                <a class="fl <if condition="$vo eq $cz" >emphasize<else /></if>" href="__URL__/prolist/cat_id/{$cat_id}/cz/{$vo}">{$vo}</a>
+                            </volist>
+                        
+                        </div>
+                    </div>
+                </div>
+		</div>
+ <php>}</php>

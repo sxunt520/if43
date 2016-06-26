@@ -1,0 +1,63 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">权限列表</a><span class="crumb-step">&gt;</span><span>添加权限角色</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th width="10%">角色名：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                            <th></th>
+                            <td class="labelBlock">
+                               <volist name="ruleAll" id="vo">
+                               
+                                    <label><input type="checkbox" value="{$vo.id}" name="rules[]">&nbsp;{$vo.title}&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+                               </volist> 
+                            </td>
+                        </tr>
+                            
+                            <tr>
+                                <th>
+                                 <button type="button">全选</button>
+                           		 <button type="button">反选</button>
+                                 </th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+<script>
+	  $(function () {
+		var bool = true;
+		$(':button:contains(全选)').bind('click',function(){
+			// 全选一定有标示状态
+			$(':checkbox[name="rules[]"]').each(function(){
+				$(this).prop('checked',bool);
+			});
+			bool=!bool;
+		});
+
+		$(':button:contains(反选)').bind('click',function(){        	
+			$(':checkbox[name="rules[]"]').each(function(){
+				$(this).prop('checked',!this.checked);
+			});
+		});
+	 })
+</script>
+</block>          

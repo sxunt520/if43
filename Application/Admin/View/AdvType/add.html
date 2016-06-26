@@ -1,0 +1,46 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">广告类型</a><span class="crumb-step">&gt;</span><span>添加广告类型</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th width="10%"><i class="require-red">*</i>广告类型名：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="type_name" size="30" value="" type="text">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th width="10%"><i class="require-red">*</i>宽：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="width" size="10" value="" type="text">&nbsp;&nbsp;px
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th width="10%"><i class="require-red">*</i>高：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="height" size="10" value="" type="text">&nbsp;&nbsp;px
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>
+                                 </th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="添加" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+</block>          

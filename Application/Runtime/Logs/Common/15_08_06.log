@@ -1,0 +1,18 @@
+[ 2015-08-06T07:18:16+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-08-06T07:18:16+08:00 ] 127.0.0.1 /favicon.ico
+ERR: 无法加载模块:Favicon
+
+[ 2015-08-06T07:20:37+08:00 ] 127.0.0.1 /Public/images/nav-act.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+ERR: 无法加载模块:Public
+
+[ 2015-08-06T07:22:38+08:00 ] 127.0.0.1 /Public/images/nav-act.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001583s ]
+ERR: 无法加载模块:Public
+

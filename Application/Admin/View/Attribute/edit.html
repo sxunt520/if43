@@ -1,0 +1,75 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">管理员列表</a><span class="crumb-step">&gt;</span><span>修改属性</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="theForm" name="theForm" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        
+                            <tr>
+                                <th width="180"><i class="require-red">*</i>属性名称：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="attr_name" size="50" value="{$row.attr_name}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>所属商品类型：</th>
+                                <td>
+                                 <select name="type_id" onchange="searchAttr(this.value)">
+                                    <option value="0">全部</option>
+                                    <foreach name="types" item="type">
+                                        <option value="{$type['type_id']}"
+                                        <if condition="$type['type_id'] eq $row['type_id']">selected='selected'<else /></if>
+                                        >{$type['type_name']}</option>
+                                    </foreach>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>属性是否可选：</th>
+                                <td>
+                                    <label><input type="radio" name="attr_type" value="0" <if condition="$row['attr_type'] eq 0 ">checked='checked'<else /></if>>&nbsp;唯一属性</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label><input type="radio" name="attr_type" value="1" <if condition="$row['attr_type'] eq 1 ">checked='checked'<else /></if>>&nbsp;单选属性 </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label><input type="radio" name="attr_type" value="2" <if condition="$row['attr_type'] eq 2 ">checked='checked'<else /></if>>&nbsp;复选属性 </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>该属性值的录入方式：</th>
+                                <td>
+                                <label><input type="radio" name="attr_input_type" value="0"  <if condition="$row['attr_input_type'] eq 0 ">checked='checked'<else /></if> onclick="radioClicked(0)">&nbsp;手工录入</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label><input type="radio" name="attr_input_type" value="1" <if condition="$row['attr_input_type'] eq 1 ">checked='checked'<else /></if> onclick="radioClicked(1)">&nbsp;从下面的列表中选择（一行代表一个可选值）</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label><input type="radio" name="attr_input_type" value="2" <if condition="$row['attr_input_type'] eq 2 ">checked='checked'<else /></if> onclick="radioClicked(0)">&nbsp;多行文本框</label>        
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>可选值列表：</th>
+                                <td>
+                               <textarea name="attr_value" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10" <if condition="$row['attr_input_type'] neq 1 ">disabled='disabled'<else /></if>>{$row.attr_value}</textarea>      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </form>
+            </div>
+        </div>
+<script type="text/javascript">
+/**
+ * 点击类型按钮时切换选项的禁用状态
+ */
+function radioClicked(n)
+{
+  document.forms['theForm'].elements["attr_value"].disabled = n > 0 ? false : true;
+}
+</script>
+</block>          

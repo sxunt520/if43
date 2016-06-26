@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>重设密码</title>
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/reglogin.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript"></script>
+<script src="/Public/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script>
+</head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+		<div id="container">
+			<div class="content clearfix">
+				
+					<div class="set-box">
+						<h2 class="findH2">重设密码</h2>
+                        <p>亲爱的<span class="fuchsia">"{$Think.session.findinfo.username}"</span>用户为你现在可以为你自己重设密码!</p>
+						<div class="set-password">
+
+						<form action="__URL__/doupdate" id="J_PwdEmail" class="set-form" method="post">
+							<div class="form-row clearfix">
+								<label style="width:110px;">新密码：</label>
+								<input name="pwd" class="base-input" type="password">
+							</div>
+							<div class="form-row clearfix">
+								<label style="width:110px;">确认新密码：</label>
+								<input name="repwd" class="base-input" type="password">
+							</div>
+                            <div class="form-row clearfix">
+                                <label style="width:110px;">验证码：</label>
+                                <img id="codeImg" width="90" height="36" src="__URL__/getCode" onClick="this.src='__URL__/getCode/'+Math.random()" style="cursor:pointer;"/> 
+                                <input class="base-input" name="code" placeholder="" style="width:80px;" id="checkcode" type="text">
+                            </div>
+							<div class="form-row">
+								<label style="width:110px;">&nbsp;</label>
+								<input class="bbl-btn submit" value="修改" type="submit">
+                                <input type="hidden" value="{$Think.session.findinfo.id}" name="id">
+							</div>
+						</form>
+						</div>
+					</div>
+				
+			</div>
+		</div><!--container end-->
+<include file="./Application/Home/View/Public/footer.html" />
+</body>
+</html>

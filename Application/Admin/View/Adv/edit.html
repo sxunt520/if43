@@ -1,0 +1,72 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Manager/index">管理员列表</a><span class="crumb-step">&gt;</span><span>修改类型</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="__SELF__" method="post" id="theForm" name="theForm" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        	<tr>
+                                <th width="180"><i class="require-red">*</i>所属广告类型：</th>
+                                <td>
+                                 <select name="type_id" onchange="searchAttr(this.value)">
+                                    <!--<option value="0">请先选择广告类型</option>-->
+                                    <foreach name="types" item="type">
+                                        <option value="{$type['type_id']}"
+                                        <if condition="$type['type_id'] eq $row['type_id']">selected='selected'<else /></if>
+                                        <if condition="$type['type_id'] neq $row['type_id']">disabled='disabled'<else /></if>
+                                        >{$type['type_name']}</option>
+                                    </foreach>
+                                </select>
+                                </td>
+                            </tr>
+                            <if condition="$row eq '' "><else /> 
+                            <tr>
+                                <th><i class="require-red">*</i>广告标题：</th>
+                                <td>
+                                    <input class="common-text required" name="title" size="40" value="{$row.title}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>广告图片：</th>
+                                <td>
+                                	<img src="/Public/uploads/{$row.advimg}" width="200" style="margin:10px 10px 10px 0"/><input name="advimg"  type="file">请上传<span class="redColor">{$row.width}X{$row.height}</span>的图片&nbsp;&nbsp;&nbsp;__(^_^)∠※-~~
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>跳转链接：</th>
+                                <td>
+                                    <input class="common-text required" name="jumpurl" size="50" value="{$row.jumpurl}" type="text" onfocus="if (this.value == '{$row.jumpurl}'){this.value='';}" onblur="if (this.value == ''){this.value='{$row.jumpurl}';}">
+                                </td>
+                            </tr>
+                             <tr>
+                                <th>广告排序：</th>
+                                <td>
+                                    <input class="common-text required" name="advorder" size="3" value="{$row.advorder}" type="text" onfocus="if (this.value == '{$row.advorder}'){this.value='';}" onblur="if (this.value == ''){this.value='{$row.advorder}';}">
+                                </td>
+                            </tr>
+                             <tr>
+                                <th>是不显示：</th>
+                                <td>
+                                	&nbsp;&nbsp;
+                                	<label><input type="radio" name="is_show" value="1" <if condition="$row['is_show'] eq 1">checked="checked"<else /></if>>&nbsp;是 </label>&nbsp;&nbsp;
+                                    <label><input type="radio" name="is_show" value="0" <if condition="$row['is_show'] eq 0">checked="checked"<else /></if>>&nbsp;否</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="修改" type="submit">
+                                    <input class="btn btn6" onClick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                            </if>
+                        </tbody>
+                        </table>
+                </form>
+            </div>
+        </div>
+</block>          

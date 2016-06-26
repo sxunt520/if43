@@ -1,0 +1,39 @@
+[ 2015-08-01T19:43:15+08:00 ] 127.0.0.1 /Admin/Attribute/getAttrs/type_id/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `if43_attribute` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `if43_attribute` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `if43_attribute` WHERE ( type_id = 2 )  [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001560s ]
+
+[ 2015-08-01T20:56:12+08:00 ] 127.0.0.1 /Admin/Pro/sel2/first//second//cid/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+NOTIC: [8] Undefined index: second D:\web\IF43\Application\Admin\Controller\ProController.class.php 第 280 行.
+NOTIC: [8] Undefined index: cid D:\web\IF43\Application\Admin\Controller\ProController.class.php 第 281 行.
+SQL: SHOW COLUMNS FROM `if43_category` [ RunTime:0.0031s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'second' in 'where clause'
+
+[ 2015-08-01T23:51:08+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001735s ]
+
+[ 2015-08-01T23:51:15+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `if43_admin` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `if43_admin` WHERE `email` = 'vip@IF43.com' AND `password` = '9c59eddb58ba5f4256322ebd4f6ea1e8' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2015-08-01T23:51:44+08:00 ] 127.0.0.1 /Admin/Login/ajaxlogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002043s ]
+SQL: SHOW COLUMNS FROM `if43_admin` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `if43_admin` WHERE `email` = 'vip@IF43.com' AND `password` = '9c59eddb58ba5f4256322ebd4f6ea1e8' LIMIT 1   [ RunTime:0.0003s ]
+

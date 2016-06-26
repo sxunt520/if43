@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>如果时尚！爱否时尚-发现喜欢-不外出逛街一样可以发现自己喜欢的!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="如果，时尚，爱否，购物分享，购物社区">
+<meta name="description" content="如果，从这里开始，发现喜欢，改变生活。我们为你推荐适合的消费，是你购物决策的贴心助理。整合商品信息、网友评价，服务质量和价格比较。">
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/new_find_2014.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script></head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+<div class="layout1200">
+	<div class="find_tag_header clearfix">
+    		
+       <include file="./Application/Home/View/Public/listMenu.html" />
+    
+		<div class="fr cate_sidebar">
+			<div class="relative_tag_box">
+				<h2 class="bigfs"><span class="mr15">[</span>当季<em>鞋子</em>推荐<span class="ml15">]</span></h2>
+				<div class="relative_tag_a_box bigfs mt5">
+                        
+                        <volist name="tj1" id="vo">
+                        	<a href="__URL__/prolist/cat_id/{$vo.cat_id}">{$vo.cat_name}</a>
+                        </volist>
+                			
+                </div>
+			</div>
+			<div class="relative_topic_box">
+				<h2 class="bigfs">精选主题推荐</h2>
+                <div class="tac">
+                	<a href="{$newPic.jumpurl}" title="{$newPic.title}" target="_blank">
+                    <img src="/Public/uploads/{$newPic.advimg}" alt="{$newPic.title}" height="114" width="265">
+                    </a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<a name="tagB" id="tagB"></a>
+	<div class="find_sort_box clearfix">
+        <h3 class="fl"><a href="__URL__/prolist/cat_id/{$nowCatName.cat_id}">{$nowCatName.cat_name}</a></h3>
+        <span class="fs14 ml5 mr5 fl">&gt;</span>
+            <div class="sort_unit fl ml40">
+            <a href="__URL__/prolist/cat_id/{$cat_id}/top/hot/priceTop/{$priceTop}/fg/{$fg}#tagB" <if condition="$top eq 'hot' ">class='on'<else /></if>>热门</a>|
+            <a href="__URL__/prolist/cat_id/{$cat_id}/top/new/priceTop/{$priceTop}/fg/{$fg}#tagB" <if condition="$top eq 'new' ">class='on'<else /></if>>最新</a>
+            </div>
+         <div class="range-box">
+            <form method="get" action="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/fg/{$fg}#tagB" class="showHide">
+              <!--这里被选择中添加class="on"-->
+                 <a href="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/priceTop/all/fg/{$fg}#tagB" <if condition="$priceTop eq 'all' ">class='on'<else /></if>>全部</a>|
+                 <a href="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/priceTop/100/fg/{$fg}#tagB" <if condition="$priceTop eq '100' ">class='on'<else /></if>>100元</a>|
+                 <a href="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/priceTop/200/fg/{$fg}#tagB" <if condition="$priceTop eq '200' ">class='on'<else /></if>>200元</a>|
+                 <a href="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/priceTop/300/fg/{$fg}#tagB" <if condition="$priceTop eq '300' ">class='on'<else /></if>>300元</a>|
+                 <a href="__URL__/prolist/cat_id/{$cat_id}/top/{$top}/priceTop/300x/fg/{$fg}#tagB" <if condition="$priceTop eq '300x' ">class='on'<else /></if>>300以上</a>|
+                <input name="minPrice" id="J_RSInput" type="text" value="{$minPrice}">-<input name="maxPrice" id="J_REInput" type="text" value="{$maxPrice}">
+                <input style="display: none;" value="确定" class="range-button showHideIng" type="submit">
+            </form>
+          </div>
+	</div>
+
+<div class="brand-list" id="brand-waterfall">
+ 
+	<volist name="proList" id="vo">
+        <div class="item proMain" id="brand-{$vo.pro_id}">
+                <div class="f_goods">
+                    <a class="pic_a" href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank"><img src="/Public/uploads/{$vo.img250x250}" alt="{$vo.pro_title}" width="224"></a>
+                    <div class="price_like_box clearfix">
+                        <span class="price fl bigfs">￥{$vo.pro_price}</span><del class="ml5 fl">￥{$vo['pro_price']+28}</del><span class="discount-btn fl ml5">{$vo['price_trend']/10}折</span>
+                        <span class="fr like_unit_box"><a href="javascript:;" class="faxian_g_icon faxian_like_icon fl"></a><span class="fr like_count">&nbsp;&nbsp;5</span></span>
+                    </div>
+                    <div class="title_box ofh">{$vo.pro_title}</div>
+                    <div class="comment_box">
+                    	
+                        	<assign name="num" value="0" />
+                    	<volist name="commentRows" id="vo2">
+                            <if condition="$vo2['pro_id'] eq $vo['pro_id']">
+                            <assign name="num" value="$num+1" />
+                            	<in name="num" value="1,2,3">
+                                    <div class="unit clearfix">
+                                        <img src="/Public/uploads/{$vo2.img180x180}" alt="{$vo.username}" title="{$vo.username}" class="fl" width="25">
+                                        <div class="fl ml10 comment">
+                                        <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank" class="ofh">
+                                        {$var}{$vo2.content}
+                                        </a>
+                                        </div>
+                                    </div>
+                                </in>
+                            <else /></if>    
+                         </volist>   
+                         
+                        <div class="comment_num_box">
+                            <a href="__MODULE__/Detail/index/pro_id/{$vo.pro_id}" target="_blank">查看全部评价({$num})</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </volist>
+      
+</div>
+
+<div class="tac mt20 clearfix">
+    <div class="pagin inlineblock clearfix">
+        {$spage}
+    </div>
+</div>
+	
+</div>
+<include file="./Application/Home/View/Public/footer.html" />
+</body>
+</html>

@@ -1,0 +1,98 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">广告列表</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="__SELF__" name="type_id" method="get">
+                    <table class="search-tab">
+                        <tr>
+                      		<th width="78">选择类型:</th>
+                            <td>
+                                <select name="type_id" onchange="searchAttr(this.value)">
+                                    <option value="0">全部</option>
+                                    <foreach name="types" item="type">
+                                        <option value="{$type['type_id']}"
+                                        <if condition="$type['type_id'] eq $type_id">selected='selected'<else /></if>
+                                        >{$type['type_name']}</option>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+			function searchAttr(type_id) {
+			  window.location.href = "__URL__/index/type_id/"+ type_id;
+			}
+		</script>
+        <div class="result-wrap">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="__URL__/add/type_id/{$type_id}"><i class="icon-font"></i>添加广告</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                <form name="myform" action="__CONTROLLER__/deleteall" id="myform" method="post">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
+                            <th>ID</th>
+                            <th>广告类型名</th>
+                            <th>广告标题</th>
+                            <th>广告图片</th>
+                            <th>跳转地址</th>
+                            <th>排序</th>
+                            <th>是否显示</th>
+                            <th>操作</th>
+                        </tr>
+                        <foreach name="list" item="v">
+                            <tr>
+                                <td class="tc"><input name="id[]" value="{$v.id}" type="checkbox"></td>
+                                <td>{$v.id}</td>
+                                <td>{$v.type_name}</td>
+                                <td>{$v.title}</td>
+                                <td><img src="/Public/uploads/{$v.advimg}" width="100" /></td>
+                                <td>{$v.jumpurl}</td>
+                                <td>{$v.advorder}</td>
+                                <td><if condition="$v.is_show eq '1' "><i class="icon-font">&#xe068;</i><else /><i class="icon-font">&#xe069;</i></if></td>
+                                <td>
+                                    <a href="__CONTROLLER__/edit/id/{$v.id}">修改</a><span class="spanGray">|</span>
+                                    <a onclick="return confirm(' 你确定要删除吗？')" href="__CONTROLLER__/delete/id/{$v.id}">删除</a>
+                                </td>
+                            </tr>
+                        </foreach>
+                    </table>
+                        <div class="checkAll">
+                            <button type="button">全选</button>
+                            <button type="button">反选</button>
+                            <input type="submit" name="action" value="删除" onclick="return confirm(' 你确定要删除吗？')">
+                        </div>      
+                    <div class="list-page">{$spage}</div>
+                     	</form>
+                </div>
+           
+        </div>
+        <script>
+              $(function () {
+                var bool = true;
+                $(':button:contains(全选),.allChoose').bind('click',function(){
+                    // 全选一定有标示状态
+                    $(':checkbox[name="id[]"]').each(function(){
+                        $(this).prop('checked',bool);
+                    });
+                    bool=!bool;
+                });
+        
+                $(':button:contains(反选)').bind('click',function(){        	
+                    $(':checkbox[name="id[]"]').each(function(){
+                        $(this).prop('checked',!this.checked);
+                    });
+                });
+             })
+        </script>
+</block>         

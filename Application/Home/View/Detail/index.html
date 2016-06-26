@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$row.pro_title}-如果时尚！爱否时尚-</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="如果时尚！爱否时尚,{$row.pro_name}">
+<meta name="description" content="{$row.pro_desc}">
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/css/detail_new.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script>
+<link href="/Public/css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+
+<div id="product" style="width:1200px; margin:0 auto;">		
+			 	<div style="width:480px; height:auto; overflow:hidden; float:left; background:#fff">
+                
+        <div class="lanrenzhijia">
+        <!-- 大图begin -->
+        <div id="preview" class="spec-preview"> 
+        <span class="jqzoom"><img jqimg="/Public/uploads/{$galaryRows[0]['img_url']}" src="/Public/uploads/{$galaryRows[0]['thumb_url']}" width="480" /></span> 
+        </div>
+        <!-- 大图end -->
+        <!-- 缩略图begin -->
+        <div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+        <div class="items">
+    <ul>
+    	<volist name="galaryRows" id="vo">
+        	<li><img bimg="/Public/uploads/{$vo.img_url}" src="/Public/uploads/{$vo.thumb_url}" title="{$vo.img_desc}" alt="{$vo.img_desc}" onmousemove="preview(this);"></li>
+       </volist>
+    </ul>
+        </div>
+  
+        </div>
+        <!-- 缩略图end -->
+        <script src="/Public/js/jquery.jqzoom.js"></script>
+        <script src="/Public/js/lanrenzhijia.js"></script>
+        </div>
+                       </div>
+			<!--gallery end-->	
+		    <div class="gallery-text" style="position:relative;">
+                <div class="clearfix tar">
+               		 <a rel="nofollow" class="J_JiuCuo" href="javascript:;">价格有误？</a>
+                </div>
+                    <div class="buy-box mb10">
+                        <div class="clearfix" id="J_BuyBox1">
+                        <div class="buy-meta">
+                        <span class="price">¥</span>
+                        <span class="price-limit bigfs">
+                             {$row.pro_price}
+                        </span>
+                        </div>
+                            <div class="price-box">
+                                 <div class="rebate"><span class="bigfs">↓</span>{$row.price_trend}%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--buy-box end-->
+                    <h2 class="clearfix">{$row.pro_title}</h2>
+                    <div class="gallery-info">
+                        <p>{$row.pro_desc}</p>
+                    </div>
+                        <div class="button_go clearfix">
+                       		 <a class="buy-btn" href="{$row.buy_url}" target="_blank">去购买</a>
+                		</div>
+                
+                <div class="comment-list">
+
+                    <div class="comment-publish clearfix">
+                        <div class="pub-box clearfix">
+                            <div class="fl">
+                            <if condition="$Think.session.user eq null">
+                            <img src="/Public/img/avatar-50.png" alt="匿名" width="40">
+                            <else/>
+                            <img src="/Public/uploads/{$Think.session.user.img180x180}" alt="{$Think.session.user.username}" width="40">
+                            </if>
+                            </div>
+                            <div class="cmt-doc">
+                                <div class="fm">
+                                    <textarea class="cmt-txa" name="content" id="commContent" placeholder="亲，觉得这个怎样？"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="J_CmtHiddenForm">
+                            <div class="submit-row" style="position:relative;">
+                                <input class="pub" id="commSub" value="发布" type="button">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div id="J_ShowResult">
+                        <!--第二个以上的div加class hideDiv-->
+                        	
+                            <volist name="commentRows" id="vo" key="k">
+                                <div class="cmt clearfix <if condition="$k gt 3 ">hideDiv<else /></if>">
+                                <div class="user-pic">
+                                    <a href="#">
+                                       <if condition="$vo.img180x180 eq null">
+                                        <img src="/Public/img/avatar-50.png" alt="匿名" width="40">
+                                        <else/>
+                                        <img src="/Public/uploads/{$vo.img180x180}" alt="{$vo.username}">
+                                        </if>
+                                    </a>
+                                </div>
+                                <div class="cmt-doc">
+                                <div class="cmt-info clearfix">
+                                <a class="fl" href="#" title="ltffvk" target="_blank">{$vo.username}</a>
+                                <span class="fl gc"></span>
+                                <span class="fr gc">
+                                </span>
+                                <span class="fr gc mr5 ">{$vo.time|date="Y/m/d h:m",###}</span>
+                                </div>
+                                <p class="cmt-content clearfix"><span>{$vo.content}</span>
+                                <a class="J_CmtReplyBtn btn hf">回复<em class="J_ReplyCount" data-count="0"></em></a>
+                                </p>
+                                
+                                <div class="cmt-reply J_CmtReply hf2" style="display:none">
+                                    <textarea class="b-textarea J_ReplyTxt atsug" placeholder="回复内容!" id="content_{$vo.id}"></textarea>
+                                    <p class="reply-info clearfix"><a class="sbl-btn J_ReplySubmit" data-type="list" id="hf_{$vo.id}" href="javascript:void(0);" onClick="hfInfo({$vo.id})">回复</a></p>
+                                    <ul class="reply-list J_ReplyList">
+                                        <volist name="hfRows" id="vo2">
+                                        	<if condition="$vo['id'] eq $vo2['pid']">
+                                           		 <li>
+                                                    <img src="/Public/uploads/{$vo2.img180x180}" alt="{$vo2.username}" width="30">
+                                                 	<strong>{$vo2.username}回复:</strong>
+                                                    <p>{$vo2.content}</p>
+                                                 </li>
+                                            <else /></if>
+                                        </volist>
+                                    </ul>
+                                </div>
+                                
+                                </div>
+                                </div>
+                            </volist>
+                          	
+                            </div>
+                                 <div class="cmt-more mt15 gengduo"><span id="J_Pagination">展开评论({$commentNums})</span></div>
+                                 <div class="cmt-more mt15 showqi" style="display:none"><span id="J_Pagination" class="on">关闭评论({$commentNums})</span></div>
+                                <!--J_ShowResult end-->
+                    </div>
+                    <!--comment end-->
+                </div>
+                <!-- JiaThis Button BEGIN -->
+                <div class="fx">
+                    <div id="ckepop">
+                        <span class="jiathis_txt">分享到：</span>
+                        <a class="jiathis_button_weixin">微信</a>
+                        <a class="jiathis_button_qzone">QQ空间</a>
+                        <a class="jiathis_button_tsina">新浪微博</a>
+                        <a class="jiathis_button_renren">人人网</a> 
+                        <a href="http://www.jiathis.com/share"  class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+                        <a class="jiathis_counter_style"></a>
+                    </div> 
+                   <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+                </div>
+                <!-- JiaThis Button END -->
+			</div>
+			<!--gallery-text end-->
+					</div>
+    <div style=" clear:both;"></div>
+    <div class="xgtj">
+        <h2>相关宝贝推荐</h2>
+    </div>
+    <div class="goods-wall s1024 clearfix" id="J_GoodsWall" style="width:1200px; margin:0 auto; margin-bottom:20px;">
+<!--first 18 goods begin-->
+<div class="section clearfix">
+
+        <div class="goods big" data-pid="13227272">
+            <div class="goods-pic"><a class="pic-link" href="__MODULE__/Detail/index/pro_id/{$moreRows[0]['pro_id']}" title="{$moreRows[0]['pro_title']}" target="_blank"><img src="/Public/uploads/{$bigPic['thumb_url']}" height="460" width="460"></a></div>
+            <div class="goods-title ofh">{$moreRows[0]['pro_title']}</div>
+            <div class="goods-stat clearfix">
+            <div class="fl"><span class="yc">¥{$moreRows[0]['pro_price']}</span></div>
+            <a class="small-like-icon fr" href="javascript:;"></a>
+        </div>
+        <p class="goods-des">{$moreRows[0]['pro_price']}</p>
+        <div class="comment">{$moreRows[0]['pro_desc']}</div>
+        </div>
+        
+        	<volist name="moreRows" id="vo" offset="1" length='7'>
+                <div class="goods small" data-pid="13227312">
+                    <div class="goods-pic">
+                        <a class="pic-link" href="__MODULE__/Detail/index/pro_id/{$vo['pro_id']}" title="{$vo['pro_title']}" target="_blank"><img src="/Public/uploads/{$vo['img250x250']}" alt="{$vo['pro_title']}" width="210" height="210"></a>
+                    </div>
+                    <div class="goods-title ofh">{$vo['pro_title']}</div>
+                    <div class="goods-stat clearfix">
+                        <div class="fl"><span class="yc">¥{$vo['pro_price']}</span></div>
+                        <a class="small-like-icon fr" href="javascript:;"></a>
+                    </div>
+                    <div class="comment">{$vo['desc']}</div>
+                </div>
+          	</volist>
+                
+            </div>
+            </div>
+            </div>
+<include file="./Application/Home/View/Public/footer.html" />
+<script>
+$('#commSub').on("click",function(){
+	
+	$(this).val("评论中");
+	var content=$('#commContent').val();
+	var uid="<if condition='$Think.session.user eq null'><else/>{$Think.session.user.id}</if>";
+	var username="<if condition='$Think.session.user eq null'>匿名<else/>{$Think.session.user.username}</if>";
+	var pro_id="{$row.pro_id}";
+//	console.log(content);
+//	console.log(uid);
+//	console.log(username);
+//	console.log(pro_id);
+	var url="__URL__/comment";
+	$.post(url,{content:content,uid:uid,username:username,pro_id:pro_id},function(msg){
+				console.log(msg);
+				if(msg){
+					$('#J_ShowResult').prepend(msg);
+					$('#commSub').val("评论");
+				}else{
+				}	
+			});
+	
+});
+		
+function hfInfo(id){
+	
+	$('#hf_'+id).html("<span>回复中</span>");
+	
+	var id=id;
+	var content=$('#content_'+id).val();
+	var uid="<if condition='$Think.session.user eq null'><else/>{$Think.session.user.id}</if>";
+	var username="<if condition='$Think.session.user eq null'>匿名<else/>{$Think.session.user.username}</if>";
+	var pro_id="{$row.pro_id}";
+	
+	var url="__URL__/hfAjax";
+	$.post(url,{id:id,content:content,uid:uid,username:username,pro_id:pro_id},function(msg){
+				//console.log(msg);
+				if(msg){
+					
+					$('#content_'+id).siblings('.J_ReplyList').prepend(msg);
+					$('#hf_'+id).html("回复");
+					
+				}else{
+				}	
+			});
+	
+	}
+</script>
+</body>
+</html>

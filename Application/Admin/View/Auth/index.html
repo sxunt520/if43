@@ -1,0 +1,33 @@
+<extend name="Public:layout"/>
+<block name="page-content">
+
+<div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/admin/index">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">角色列表页</span></div>
+        </div>
+        
+        <div class="result-wrap">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="__URL__/addRole"><i class="icon-font"></i>添加权限角色</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>ID</th>
+                            <th>角色名</th>
+                            <th width="30%">操作</th>
+                        </tr>
+                        <volist name="list" id="vo">
+                            <tr>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.title}</td>
+                                <td><a href="__CONTROLLER__/modauth/id/{$vo.id}">修改角色权限</a><span class="spanGray">|</span><a onclick="return confirm(' 你确定要删除吗？')" href="__CONTROLLER__/deleteRole/id/{$vo.id}">删除角色</a></td>
+                            </tr>
+                        </volist>	
+                    </table>
+                </div>
+           
+        </div>
+        
+</block>         

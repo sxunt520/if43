@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登录</title>
+<link href="/Public/images/base.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/global.css" rel="stylesheet" type="text/css">
+<link href="/Public/images/reglogin.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/Public/css/trends2015.css">
+<!--[if lt IE 9]>
+    <script src="/Public/js/html5shiv.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript"></script>
+<script src="/Public/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Public/js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/css/visual.css">
+</head>
+<body>
+<include file="./Application/Home/View/Public/top.html" />
+<div id="container">	
+	<div class="content clearfix">
+		<div class="login-box">
+			<h2>登录</h2>
+			<div class="form">
+				
+	    		<fieldset class="reg">
+	        		<legend>
+	        			使用已注册的“IF43”帐号登录：
+                        <span >没有帐号？<a href="/Home/Reg">免费注册</a></span>
+	        		</legend>
+	        		<div class="field-box pt25">
+	        		<form class="mt15"  method="post" action="__URL__/login">
+						<div class="form-row">
+							<label>账号：</label>
+							<input class="base-input" id="mlsUser" name="username" placeholder="" type="text">
+                            <span class="user_icon"></span>
+						</div>
+						<div class="form-row">
+							<label>密码：</label>
+							<input class="base-input" name="password" id="password" value="" type="password">
+                            <span class="pwd_icon"></span>
+						</div>
+                        <div class="form-row">
+							<label>验证码：</label>
+                            <img  width="90" height="36" src="__URL__/getCode"  onClick="this.src='__URL__/getCode/'+Math.random()" style="cursor:pointer;"/> 
+                           <!-- <img id="yzm" style="display:inline-block;margin-top:0px; width:110px; height:33px; cursor:pointer;" title="点击刷新" src="/Admin/Login/verifyImg" align="absbottom" onClick="this.src='/Admin/Login/verifyImg/'+Math.random()" width="110"></img>-->
+							<input class="base-input" name="code" placeholder="" style="width:80px;" type="text">
+                            <!--<span class="code_icon"></span>-->
+						</div>
+						<div class="form-row">
+							<label>&nbsp;</label>
+							<input class="check" name="remember" value="1" type="checkbox">
+							<span>两周内自动登录</span>
+						</div>
+						<div class="form-row">
+							<label>&nbsp;</label>
+							<input class="bbl-btn submit login_btn" value="登录" type="submit">
+							<a class="forgotlink" href="__URL__/find">忘记密码？</a>
+						</div>
+					</form>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="login-ad">
+            <a href="#" target="_bank" title="逛画报">
+            	<img src="/Public/images/promotion_207_1_9244343565546.jpg" height="435" width="300">
+            </a>
+		</div>		
+	</div><!--content end-->
+</div>
+<include file="./Application/Home/View/Public/footer.html" />
+<script src="__PUBLIC__/js/login.js"></script>
+<script>
+  var url3= "__CONTROLLER__/check_verify";
+</script>
+</body>
+</html>
